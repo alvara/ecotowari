@@ -4,6 +4,7 @@ import client from '../client'
 import groq from 'groq'
 import Container from '../common/Container'
 import Link from "next/link"
+import Instagram from 'instagram-web-api'
 
 import MainLayout from '../modules/layouts/mainLayout'
 import HeroHeader from '../modules/sections/HeroHeader'
@@ -14,9 +15,11 @@ import GetStickerCTA from "../modules/sections/GetStickerCTA"
 import LatestNews from "../modules/sections/LatestNews"
 import FollowUs from "../modules/sections/FollowUs"
 
-// index.js
-export default function Index({posts, portfolio, tags, showcaseTags}) {
 
+// index.js
+export default function Index({posts, portfolio, tags, igPosts}) {
+
+  console.log(igPosts)
   return (
     <>
       <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 d-flex flex-column justify-content-center">
@@ -46,8 +49,7 @@ export default function Index({posts, portfolio, tags, showcaseTags}) {
 }
 
 // Get the main template for standard pages
-Index.getLayout = function getLayout(page: ReactElement) {
-  
+Index.getLayout = function getServerSideProps(page: ReactElement) {
   return (
     <MainLayout>
       {page}
@@ -57,9 +59,9 @@ Index.getLayout = function getLayout(page: ReactElement) {
 
 Index.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.object),
+  igPosts: PropTypes.arrayOf(PropTypes.object),
   portfolio: PropTypes.arrayOf(PropTypes.object),
   tags: PropTypes.arrayOf(PropTypes.object),
-  showcaseTags: PropTypes.arrayOf(PropTypes.object),
 }
 
 // get static generated content
@@ -87,65 +89,74 @@ export async function getStaticProps() {
     } | order(publishedAt desc)
   `)
 
-  // Query For Portfolio Tags
-  const portfolio = await client.fetch(groq`
-    *[_type == "portfolio"]{
-      _id,
-      title,
-      summary,
-      slug,
-      "mainImage": mainImage.asset->url,
-      "tags": tag[]->{
-        title,
-        slug,
+    // Query For Portfolio Tags
+    const portfolio = await client.fetch(groq`
+      *[_type == "portfolio"]{
         _id,
-        showcase,
-        "image" : image.asset->url
-      },
-      "tagList": tag[]->slug
-    } | order(publishedAt desc)
-  `)
+        title,
+        summary,
+        slug,
+        "mainImage": mainImage.asset->url,
+        "tags": tag[]->{
+          title,
+          slug,
+          _id,
+          showcase,
+          "image" : image.asset->url
+        },
+        "tagList": tag[]->slug
+      } | order(publishedAt desc)
+    `)
 
-  // Count number of instances of a tag and store it
-  const tagsObj = {}
-  portfolio.forEach(item => {
-    item.tags.forEach(tag => {
-      // if no tag exists yet, add it
-      if(!tagsObj[tag.slug]){
-        tagsObj[tag.slug] = {
-          title: tag.title,
-          slug: tag.slug,
-          _id: tag._id,
-          showcase: tag.showcase,
-          image: tag.image,
-          count: 1
+    // Count number of instances of a tag and store it
+    const tagsObj = {}
+    portfolio.forEach(item => {
+      item.tags.forEach(tag => {
+        // if no tag exists yet, add it
+        if(!tagsObj[tag.slug]){
+          tagsObj[tag.slug] = {
+            title: tag.title,
+            slug: tag.slug,
+            _id: tag._id,
+            showcase: tag.showcase,
+            image: tag.image,
+            count: 1
+          }
+        // tag already exists, increment counter
+        } 
+        else {
+          tagsObj[tag.slug].count += 1
         }
-      // tag already exists, increment counter
-      } 
-      else {
-        tagsObj[tag.slug].count += 1
-      }
+      })
     })
-  })
 
-  // convert object of tags to array
-  let tags = []
-  Object.entries(tagsObj).forEach(
-    ([key,value]) => tags.push(value)
-  )
+    // convert object of tags to array
+    let tags = []
+    Object.entries(tagsObj).forEach(
+      ([key,value]) => tags.push(value)
+    )
 
-  // sort tags by slug
-  tags = tags.sort((a,b) => (a.slug > b.slug) ? 1 : ((b.slug > a.slug) ? -1 : 0))
+    // sort tags by slug
+    tags = tags.sort((a,b) => (a.slug > b.slug) ? 1 : ((b.slug > a.slug) ? -1 : 0))
 
-  // Get tags that are to be showcased in the skills&experience section
-  const showcaseTags = tags.filter((tag)=>(tag.showcase === true))
+    // login to instagram
+    const username = process.env.INSTAGRAM_USERNAME
+    const password = process.env.INSTAGRAM_PSW
+    const igClient = new Instagram({username, password})
+    await igClient.login()
+  
+    // get latest instagram Posts
+    const igPosts = await igClient.getPhotosByUsername({
+      username: process.env.INSTAGRAM_USERNAME,
+      first: 8
+    })
 
   return {
     props: {
       posts,
       portfolio,
       tags,
-      showcaseTags
+      igPosts: igPosts.user.edge_owner_to_timeline_media.edges || []
     }
   }
 }
