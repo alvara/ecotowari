@@ -19,7 +19,6 @@ import FollowUs from "../modules/sections/FollowUs"
 // index.js
 export default function Index({posts, portfolio, tags, igPosts}) {
 
-  console.log(igPosts)
   return (
     <>
       <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 d-flex flex-column justify-content-center">
@@ -41,7 +40,7 @@ export default function Index({posts, portfolio, tags, igPosts}) {
       <Container wrapperClass="min-h-100"><Statistics portfolio={portfolio} tags={tags}/></Container>
       <Container wrapperClass="min-h-100"><GetStickerCTA/></Container>
       <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container>
-      <Container wrapperClass="d-flex align-items-center bg-2"><FollowUs/></Container>
+      <Container wrapperClass="d-flex align-items-center bg-2"><FollowUs igPosts={igPosts}/></Container>
       {/* <Container wrapperClass="min-h-100 d-flex align-items-center"><MySkills tags={showcaseTags}/></Container> */}
       {/* <Container wrapperClass="vh-100" className="h-100"><ContactMe /></Container> */}
     </>
@@ -49,7 +48,7 @@ export default function Index({posts, portfolio, tags, igPosts}) {
 }
 
 // Get the main template for standard pages
-Index.getLayout = function getServerSideProps(page: ReactElement) {
+Index.getLayout = function getStaticProps(page: ReactElement) {
   return (
     <MainLayout>
       {page}
