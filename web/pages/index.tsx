@@ -13,7 +13,7 @@ import AboutEcotowari from '../modules/sections/AboutEcotowari'
 import Statistics from '../modules/sections/Statistics'
 import EnvironmentImpact from "../modules/sections/EnvironmentImpact"
 import GetStickerCTA from "../modules/sections/GetStickerCTA"
-import LatestNews from "../modules/sections/LatestNews"
+// import LatestNews from "../modules/sections/LatestNews"
 import FollowUs from "../modules/sections/FollowUs"
 
 // Get the main template for standard pages
