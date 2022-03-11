@@ -1,19 +1,40 @@
 import dayjs from 'dayjs'
 
-// return number of days a sticker has been deployed on the field
-export function daysDeployed(startedAt: Date):number {
+// return total number of days for all stickers in existence
+export function totalDaysDeployed(stickers: {qty: number, started_at: Date}[]):number {
   const now = dayjs()
-  return now.diff(startedAt, 'day')
+  let totalDays = 0
+
+  // loop through stickers and add up the days
+  stickers.forEach((sticker) => {
+    totalDays += now.diff(sticker.started_at, 'day') * sticker.qty
+  })
+
+  return totalDays
 }
 
-// returns avg weight of flyers wasted
-export function avgWastePerDay(stickers: {qty: number, started_at: Date}[]): number {
-  let weight : number
+// returns avg weight of flyers wasted per day
+export function avgWastePerDay(): number {
+  const avgWastePerWeek = 80 // TODO: calc avg weight of flyers wasted per week through studies
+  return avgWastePerWeek / 7
+}
 
-  
-  // stickers.forEach((sticker) => {
-    
-  // })
-  console.log(daysDeployed(stickers[0].started_at))
-  return weight
+// How much water has been saved (in Liters)
+export function waterSaved(stickers: {qty: number, started_at: Date}[]): number {
+  return (avgWastePerDay() * totalDaysDeployed(stickers) / 1000) * 62.12
+}
+
+// How much electricity has been saved (in kWh)
+export function electricitySaved(stickers: {qty: number, started_at: Date}[]): number {
+  return (avgWastePerDay() * totalDaysDeployed(stickers) / 1000) * 2.713
+}
+
+// How much co2 has been saved (in kg-CO2e)
+export function co2Saved(stickers: {qty: number, started_at: Date}[]): number {
+  return (avgWastePerDay() * totalDaysDeployed(stickers) / 1000) * 1.93
+}
+
+// How much total weight of flyers has been reduced (in kg)
+export function flyersReduced(stickers: {qty: number, started_at: Date}[]): number {
+  return (avgWastePerDay() * totalDaysDeployed(stickers) / 1000)
 }
