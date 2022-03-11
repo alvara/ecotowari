@@ -100,7 +100,6 @@ export default function Index({posts, stickers, igPosts}) {
       </Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><AboutEcotowari /></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><EnvironmentImpact /></Container>
-      {JSON.stringify(stickers, null, 2)}
       <Container wrapperClass="min-h-100"><Statistics stickers={stickers}/></Container>
       <Container wrapperClass="min-h-100"><GetStickerCTA/></Container>
       {/* <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container> */}
