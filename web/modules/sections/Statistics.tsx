@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 Statistics.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object),
+  stickers: PropTypes.arrayOf(PropTypes.object),
 }
 
-export default function Statistics({data}) {
+export default function Statistics({stickers}) {
 
   return (
     <div id="portfolio" className="h-100 text-center d-flex flex-column justify-content-center">
