@@ -65,7 +65,7 @@ export async function getStaticProps() {
     // })
 
     // connect to supabase
-    const {data, error} = await Supabase.from('stickers').select('*')
+    const {data, error} = await Supabase.from('stickers').select('qty, started_at')
 
     if(error) {
       throw new Error(error.message)
@@ -100,6 +100,7 @@ export default function Index({posts, data, igPosts}) {
       </Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><AboutEcotowari /></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><EnvironmentImpact /></Container>
+      {JSON.stringify(data, null, 2)}
       <Container wrapperClass="min-h-100"><Statistics data={data}/></Container>
       <Container wrapperClass="min-h-100"><GetStickerCTA/></Container>
       {/* <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container> */}
