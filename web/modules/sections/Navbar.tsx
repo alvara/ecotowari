@@ -19,16 +19,16 @@ export default function Navbar() {
                 </ul>
                 <ul className="navbar-nav ms-auto">
                     <li className="nav-item active">
-                        <Link href="/mission"><a className="nav-link">Our Mission</a></Link>
+                        <Link href="/mission"><a className="nav-link">{router.locale === 'ja' ? '我々の活動' : 'Our Mission'}</a></Link>
                     </li>
                     <li className="nav-item">
-                        <Link href="/get-sticker"><a className="nav-link">Get Sticker</a></Link>
+                        <Link href="/get-sticker"><a className="nav-link">{router.locale === 'ja' ? 'ステッカーの入手' : 'Get Sticker'}</a></Link>
                     </li>
                     <li className="nav-item">
-                        <Link href="/news"><a className="nav-link">Latest News</a></Link>
+                        <Link href="/news"><a className="nav-link">{router.locale === 'ja' ? '最新情報' : 'Latest News'}</a></Link>
                     </li>
                     <li className="nav-item">
-                        <Link href="/contact"><a className="nav-link">Contact</a></Link>
+                        <Link href="/contact"><a className="nav-link">{router.locale === 'ja' ? '問い合わせ' : 'Contact'}</a></Link>
                     </li>
                     <li className="nav-item">
                         <Link href={router.asPath} locale='ja'><a className="nav-link" onClick={()=>{cookieCutter.set('NEXT_LOCALE', 'ja', new Date(999999999999))}}>JP</a></Link>
