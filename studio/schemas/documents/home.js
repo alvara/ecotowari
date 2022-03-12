@@ -124,6 +124,29 @@ export default {
         },
 
       ]
+    },
+    {
+      title: 'Get A Sticker Section',
+      name: 'ctasection',
+      description: 'This section is a call To action to direct users towards getting a sticker',
+      type: 'object',
+      fields: [
+        {
+          title: 'Title',
+          name: 'title',
+          type: 'localeString'
+        },
+        {
+          title: 'Content',
+          name: 'content',
+          type: 'localeText'
+        },
+        {
+          title: 'Button Text',
+          name: 'buttontext',
+          type: 'localeString'
+        }
+      ]
     }
   ],
 };

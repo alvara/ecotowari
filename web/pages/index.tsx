@@ -96,7 +96,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
   const router = useRouter()
   console.log(homePage)
   
-  const {headersection, aboutsection, environmentsection, statisticsection} = homePage[0]
+  const {headersection, aboutsection, environmentsection, statisticsection, ctasection} = homePage[0]
 
   return (
     <>
