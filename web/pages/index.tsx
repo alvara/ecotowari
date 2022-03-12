@@ -5,6 +5,7 @@ import groq from 'groq'
 import Container from '../common/Container'
 import Link from "next/link"
 import Supabase from '../utils/supabase'
+import {useRouter} from 'next/router'
 // import Instagram from 'instagram-web-api'
 
 import MainLayout from '../modules/layouts/mainLayout'
@@ -63,13 +64,12 @@ export async function getStaticProps() {
     //   after: 
     // })
 
-    // connect to supabase
+    // sticker data from supabase
     const {data: stickers, error} = await Supabase.from('stickers').select('qty, started_at')
-
     if(error) {
       throw new Error(error.message)
     }
-
+    
   return {
     props: {
       stickers,
@@ -87,7 +87,10 @@ Index.propTypes = {
 }
 
 export default function Index({posts, stickers, igPosts, homePage}) {
-  console.log(homePage)
+  const router = useRouter()
+  console.log(router)
+  // console.log(locales)
+  // console.log(asPath)
 
   return (
     <>
@@ -97,6 +100,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
             title={'One Sticker to protect our planet'}
             subtitle={'ecotowari is a green initiative to reduce paper waste. Our goal is to free your mailbox from unsolicited flyers. Think of it as a real-life spam filter!'}
           />
+          {`current locale is ${router.locale}`}
           
           <Link href={'/get-sticker'}><button className='btn'>Get a Sticker</button></Link>
 

@@ -1,6 +1,7 @@
 import React, {ReactElement} from 'react'
 import groq from 'groq'
 import PropTypes from "prop-types"
+import {useRouter} from 'next/router'
 
 import client from '../client'
 import MainLayout from '../modules/layouts/mainLayout'
@@ -11,6 +12,8 @@ import InfoCard from '../modules/widgets/InfoCard'
 
 // view all blog posts
 const About = ({posts}) => {
+const router = useRouter()
+  console.log(router)
   return (
     <div>
       <Container wrapperClass="vh-100-w-nav" className="h-100 text-center">
