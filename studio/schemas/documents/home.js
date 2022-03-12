@@ -147,6 +147,34 @@ export default {
           type: 'localeString'
         }
       ]
+    },
+    {
+      title: 'Follow Us Section',
+      name: 'followsection',
+      description: 'This section connects our visitors with our social networks and to see our latest activity.',
+      type: 'object',
+      fields: [
+        {
+          title: 'Title',
+          name: 'title',
+          type: 'localeString'
+        },
+        {
+          title: 'Content',
+          name: 'content',
+          type: 'localeText'
+        },
+        {
+          title: 'Instagram Profile URL',
+          name: 'instagram',
+          type: 'url'
+        },
+        {
+          title: 'Facebook Page URL',
+          name: 'facebook',
+          type: 'url'
+        },
+      ]
     }
   ],
 };
