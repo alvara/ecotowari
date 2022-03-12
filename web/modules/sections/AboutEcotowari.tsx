@@ -11,7 +11,7 @@ export default function AboutEcotowari({data}) {
   const router = useRouter()
 
   return (
-    <div className="row align-items-center">
+    <div className="row">
       <span className="text-center preTitle">{data.pretitle[router.locale]}</span>
       <h2 className="text-center">{data.title[router.locale]}</h2>
         <div className="col-6">
@@ -19,7 +19,7 @@ export default function AboutEcotowari({data}) {
         </div>
         <div className="col-6">
           {JSON.stringify(data.aboutImage, null, 2)}
-          <Image src='/danger-flyers.jpeg' width="300" height="300" layout="responsive" objectFit='scale-down' alt="test" className="" quality={30} priority/>
+          <Image src='/danger-flyers.jpeg' width="300" height="200" layout="responsive" objectFit='contain' alt="test" className="" quality={30} priority/>
         </div>
       </div>
   )
