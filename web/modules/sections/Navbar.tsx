@@ -3,13 +3,6 @@ import React from 'react'
 import {useRouter} from 'next/router'
 import cookieCutter from 'cookie-cutter'
 
-Navbar.getInitialProps = ({req}) => {
-    const isServer = !!req
-    const isBrowser = !req
-
-    console.log(isServer, isBrowser)
-}
-
 export default function Navbar() {
     const router = useRouter()
 

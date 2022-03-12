@@ -93,7 +93,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
 
   return (
     <>
-      <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 d-flex flex-column justify-headersection-center">
+      <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 d-flex flex-column justify-content-center">
         <div>
           <HeroHeader 
             title={headersection.title[router.locale]}
