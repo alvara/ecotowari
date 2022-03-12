@@ -93,7 +93,6 @@ Index.propTypes = {
 
 export default function Index({posts, stickers, igPosts, homePage}) {
   const router = useRouter()
-  console.log(homePage)
   
   const {
     headersection, 
@@ -107,7 +106,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
   return (
     <>
         <div className='header-wrapper'>
-          <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 d-flex flex-column justify-content-center">
+          <Container wrapperClass="min-h-100 d-flex align-items-center" className="h-100 d-flex flex-column justify-content-center">
               <HeroHeader 
                 title={headersection.title[router.locale]}
                 subtitle={headersection.subtitle[router.locale]}
@@ -116,11 +115,6 @@ export default function Index({posts, stickers, igPosts, homePage}) {
               />
 
               <div className='bg-overlay'></div>
-              {/* <div className="rotated-block"></div> */}
-
-              {/* <div className="bg-image-wrapper">         */}
-                {/* <Image src={'/mailbox-single.png'} layout="fill" objectFit={'contain'} alt="Background" quality={50} priority={true} /> */}
-              {/* </div> */}
           </Container>
         </div>
       <Container wrapperClass=" bg-2"><AboutEcotowari data={aboutsection}/></Container>
