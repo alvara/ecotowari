@@ -42,11 +42,6 @@ export default {
       type: 'object',
       fields: [
         {
-          title: 'PreTitle',
-          name: 'pretitle',
-          type: 'localeString'
-        },
-        {
           title: 'Title',
           name: 'title',
           type: 'localeString'
@@ -55,13 +50,7 @@ export default {
           title: 'Content',
           name: 'content',
           type: 'localeText'
-        },
-        {
-          title: 'Image',
-          name: 'image',
-          type: 'image'
-        },
-
+        }
       ]
     }
   ],
