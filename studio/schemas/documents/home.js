@@ -34,6 +34,35 @@ export default {
         },
 
       ]
+    },
+    {
+      title: 'About Section',
+      name: 'aboutsection',
+      description: 'This section describes what Ecotowari is about in a single paragraph.',
+      type: 'object',
+      fields: [
+        {
+          title: 'PreTitle',
+          name: 'pretitle',
+          type: 'localeString'
+        },
+        {
+          title: 'Title',
+          name: 'title',
+          type: 'localeString'
+        },
+        {
+          title: 'Content',
+          name: 'content',
+          type: 'localeText'
+        },
+        {
+          title: 'Image',
+          name: 'image',
+          type: 'image'
+        },
+
+      ]
     }
   ],
 };

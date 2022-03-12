@@ -34,7 +34,7 @@ export async function getStaticProps() {
 
   // query for home page content
    const homePage = await client.fetch(groq`
-      *[_type == "home-page"] | order(publishedAt desc)
+      *[_type == "home-page"]{'aboutImage': aboutsection.image.asset->url, ...} | order(publishedAt desc)
     `)
 
     // Query For news posts
@@ -94,8 +94,9 @@ Index.propTypes = {
 
 export default function Index({posts, stickers, igPosts, homePage}) {
   const router = useRouter()
+  console.log(homePage)
   
-  const {headersection} = homePage[0]
+  const {headersection, aboutsection} = homePage[0]
 
   return (
     <>
@@ -113,7 +114,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
           </div>
         </div>
       </Container>
-      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><AboutEcotowari /></Container>
+      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><AboutEcotowari data={aboutsection}/></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><EnvironmentImpact /></Container>
       <Container wrapperClass="min-h-100"><Statistics stickers={stickers}/></Container>
       <Container wrapperClass="min-h-100"><GetStickerCTA/></Container>
