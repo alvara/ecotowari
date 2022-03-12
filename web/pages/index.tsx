@@ -28,9 +28,9 @@ Index.getLayout = function getStaticProps(page: ReactElement) {
 
 export async function getStaticProps() {
   // query global settings
-  const siteConfig = await client.fetch(groq`
-  *[_type == "site-config"] | order(publishedAt desc)
-`)
+//   const siteConfig = await client.fetch(groq`
+//   *[_type == "site-config"] | order(publishedAt desc)
+// `)
 
   // query for home page content
    const homePage = await client.fetch(groq`
@@ -88,7 +88,7 @@ Index.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.object),
   stickers: PropTypes.arrayOf(PropTypes.object),
   igPosts: PropTypes.arrayOf(PropTypes.object),
-  siteConfig: PropTypes.arrayOf(PropTypes.object),
+  // siteConfig: PropTypes.arrayOf(PropTypes.object),
   homePage: PropTypes.arrayOf(PropTypes.object),
 }
 
