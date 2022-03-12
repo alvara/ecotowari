@@ -18,7 +18,7 @@ HeroHeader.propTypes = {
 
 export default function HeroHeader({preTitle, title, subtitle, date, tags = [], img, orientation = 'portrait', buttonPath = '/', buttonText}) {
   return (
-    <div className="row header justify-content-center align-items-center text-sm-center text-md-start">
+    <div className="row header justify-content-center align-items-center text-center text-md-start">
       <div className="col-md-6">
 
        {preTitle && (
