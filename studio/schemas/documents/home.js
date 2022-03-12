@@ -85,6 +85,45 @@ export default {
           type: 'localeText'
         }
       ]
+    },
+    {
+      title: 'Statistics Section',
+      name: 'statisticsection',
+      description: 'This section reveals the success ecotowari stickers are having as of this moment',
+      type: 'object',
+      fields: [
+        {
+          title: 'Title',
+          name: 'title',
+          type: 'localeString'
+        },
+        {
+          title: 'Section Summary',
+          name: 'content',
+          type: 'localeText'
+        },
+        {
+          title: 'water',
+          name: 'water',
+          type: 'localeString'
+        },
+        {
+          title: 'electricity',
+          name: 'electricity',
+          type: 'localeString'
+        },
+        {
+          title: 'co2',
+          name: 'co2',
+          type: 'localeString'
+        },
+        {
+          title: 'flyers',
+          name: 'flyers',
+          type: 'localeString'
+        },
+
+      ]
     }
   ],
 };
