@@ -1,13 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Image from 'next/image'
+import {useRouter} from 'next/router'
 
-export default function FollowUs({igPosts}) {
+FollowUs.propTypes = {
+  data: PropTypes.object
+}
+export default function FollowUs({igPosts,data}) {
+  const router = useRouter()
   console.log(igPosts)
   return (
     <div className="row">
       <span className="text-center preTitle">#ecotowari</span>
-      <h2 className="text-center">Follow Us</h2>
+      <h2 className="text-center">{data.title[router.locale]}</h2>
+      <p className="text-center"><pre>{data.content[router.locale]}</pre></p>
         <div className="row row-cols-4">
           {igPosts && igPosts.map((post) => (
             <div key={post.id} className="col">

@@ -96,7 +96,14 @@ export default function Index({posts, stickers, igPosts, homePage}) {
   const router = useRouter()
   console.log(homePage)
   
-  const {headersection, aboutsection, environmentsection, statisticsection, ctasection} = homePage[0]
+  const {
+    headersection, 
+    aboutsection, 
+    environmentsection, 
+    statisticsection, 
+    ctasection,
+    followsection
+  } = homePage[0]
 
   return (
     <>
@@ -119,7 +126,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
       <Container wrapperClass="min-h-100 bg-2  d-flex align-items-center"><Statistics stickers={stickers} data={statisticsection}/></Container>
       <Container wrapperClass="min-h-100"><GetStickerCTA data={ctasection}/></Container>
       {/* <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container> */}
-      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><FollowUs igPosts={igPosts}/></Container>
+      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><FollowUs igPosts={igPosts} data={followsection}/></Container>
       {/* <Container wrapperClass="min-h-100 d-flex align-items-center"><MySkills tags={showcaseTags}/></Container> */}
       {/* <Container wrapperClass="vh-100" className="h-100"><ContactMe /></Container> */}
     </>
