@@ -1,0 +1,12 @@
+[data-ui='Container'] {
+  max-width: 1400px !important;
+}
+
+[data-ui='Grid'] [data-ui='Grid'] [data-ui='Grid'] {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+
+[data-ui='Grid'] [data-ui='Grid'] [data-ui='Grid'] > div {
+  flex-grow: 1;
+}
