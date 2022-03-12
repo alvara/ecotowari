@@ -17,6 +17,7 @@ import figure from './objects/figure';
 import internalLink from './objects/internalLink';
 import link from './objects/link';
 import localeString from './objects/localeString';
+import localeText from './objects/localeText';
 import portableText from './objects/portableText';
 import simplePortableText from './objects/simplePortableText';
 
@@ -43,6 +44,7 @@ export default createSchema({
     internalLink,
     link,
     localeString,
+    localeText,
     mailchimp,
     page,
     portableText,

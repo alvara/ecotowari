@@ -10,7 +10,6 @@ export default () =>
     .items([
       S.documentListItem().id('global-config').schemaType('site-config').title('Site config'),
       S.documentListItem().id('home-page').schemaType('home-page').title('Home Page'),
-      S.documentTypeListItem('page').title('Pages'),
-      S.documentTypeListItem('route').title('Routes'),
-      ...S.documentTypeListItems().filter(hiddenDocTypes),
+      // S.documentTypeListItem('route').title('Routes'),
+      // ...S.documentTypeListItems().filter(hiddenDocTypes),
     ])

@@ -19,11 +19,10 @@ export default {
         {
           title: 'Subtitle',
           name: 'subtitle',
-          type: 'localeString'
+          type: 'localeText'
         },
         {
           title: 'Button Text',
-          description: 'What does the button say?',
           name: 'buttontext',
           type: 'localeString'
         },
