@@ -1,7 +1,17 @@
 import Link from 'next/link'
 import React from 'react'
+import {useRouter} from 'next/router'
 
 export default function Navbar() {
+    const router = useRouter()
+    function handleClickJp() {
+        router.push(router.asPath, router.asPath, {locale: 'ja-JP'})
+    }
+
+    function handleClickEn() {
+        router.push(router.asPath, router.asPath, {locale: 'en-US'})
+    }
+
   return (
     <nav className="navbar navbar-expand-md navbar-light border-bottom">
     <div className="container">
@@ -25,6 +35,12 @@ export default function Navbar() {
                 </li>
                 <li className="nav-item">
                     <Link href="/contact"><a className="nav-link">Contact</a></Link>
+                </li>
+                <li className="nav-item">
+                 <a className="nav-link" onClick={()=>handleClickJp()}>jp</a>
+                </li>
+                <li className="nav-item">
+                 <a className="nav-link" onClick={()=>handleClickEn()}>en</a>
                 </li>
             </ul>
         </div>
