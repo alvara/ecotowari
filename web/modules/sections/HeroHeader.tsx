@@ -1,11 +1,25 @@
 import Image from 'next/image'
 import React from 'react'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 
-export default function HeroHeader({preTitle, title, subtitle, date, tags = [], img, orientation = 'portrait'}) {
+// Define Proptypes for PortfolioItem Component
+HeroHeader.propTypes = {
+  preTitle: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  date: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.string),
+  img: PropTypes.string,
+  orientation: PropTypes.string,
+  buttonPath: PropTypes.string,
+  buttonText: PropTypes.string,
+};
+
+export default function HeroHeader({preTitle, title, subtitle, date, tags = [], img, orientation = 'portrait', buttonPath = '/', buttonText}) {
   return (
-    <div className="row">
-      <div className="col-10">
+    <div className="row header justify-content-center align-items-center text-sm-center text-md-start">
+      <div className="col-md-6">
 
        {preTitle && (
          <span className='preTitle'>{preTitle}</span>
@@ -27,28 +41,14 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
           <span className='pill mini' key={tag}>{tag}</span>
         ))}
 
-        {img && (
-          <div className={`image-container d-flex justify-content-center mt-4 rounded ${orientation === 'landscape' ? 'landscape' : ''}`} >
-              {orientation === 'landscape' ? (
-                // landscape orientation - 
-                <Image  src={img} width="800" height="500" layout="intrinsic" objectFit={'cover'} alt="Header" quality={50} priority={true} className="image"/>
-                ) : (
-                <Image  src={img}  layout="fill" objectFit={'scale-down'} alt="Header" quality={50} priority={true} className="image"/>
-              )}
-          </div>
-        )}
+        <Link href={buttonPath}><button className='btn mb-3'>{buttonText}</button></Link>
+
+      </div>
+      <div className="col-md-6">
+      <Image src={'/mailbox-single.png'}  width="550" height="300" objectFit={'scale-down'} alt="Background" quality={50} priority={true} />
+
       </div>
     </div>
   )
 }
 
-// Define Proptypes for PortfolioItem Component
-HeroHeader.propTypes = {
-  preTitle: PropTypes.string,
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  date: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string),
-  img: PropTypes.string,
-  orientation: PropTypes.string
-};

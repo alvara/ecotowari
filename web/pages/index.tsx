@@ -7,6 +7,7 @@ import Link from "next/link"
 import Supabase from '../utils/supabase'
 import {useRouter} from 'next/router'
 // import Instagram from 'instagram-web-api'
+import Image from 'next/image'
 
 import MainLayout from '../modules/layouts/mainLayout'
 import HeroHeader from '../modules/sections/HeroHeader'
@@ -107,20 +108,23 @@ export default function Index({posts, stickers, igPosts, homePage}) {
 
   return (
     <>
-      <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 d-flex flex-column justify-content-center">
-        <div>
-          <HeroHeader 
-            title={headersection.title[router.locale]}
-            subtitle={headersection.subtitle[router.locale]}
-          />
-          
-          <Link href={headersection.buttonpath}><button className='btn'>{headersection.buttontext[router.locale]}</button></Link>
+        <div className='header-wrapper'>
+          <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 d-flex flex-column justify-content-center">
+              <HeroHeader 
+                title={headersection.title[router.locale]}
+                subtitle={headersection.subtitle[router.locale]}
+                buttonPath={headersection.buttonpath[router.locale]}
+                buttonText={headersection.buttontext[router.locale]}
+              />
 
-          <div className="bg-image-wrapper">        
-            {/* <Image src={'/bg-wood.png'} layout="fill" objectFit={'contain'} alt="Background" quality={50} priority={true} /> */}
-          </div>
+              <div className='bg-overlay'></div>
+              {/* <div className="rotated-block"></div> */}
+
+              {/* <div className="bg-image-wrapper">         */}
+                {/* <Image src={'/mailbox-single.png'} layout="fill" objectFit={'contain'} alt="Background" quality={50} priority={true} /> */}
+              {/* </div> */}
+          </Container>
         </div>
-      </Container>
       <Container wrapperClass=" bg-2"><AboutEcotowari data={aboutsection}/></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center"><EnvironmentImpact data={environmentsection} /></Container>
       <Container wrapperClass="min-h-100 bg-2  d-flex align-items-center"><Statistics stickers={stickers} data={statisticsection}/></Container>
