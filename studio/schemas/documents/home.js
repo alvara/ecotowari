@@ -13,12 +13,12 @@ export default {
       type: 'object',
       fields: [
         {
-          title: 'Header Title',
+          title: 'Title',
           name: 'title',
           type: 'localeString'
         },
         {
-          title: 'Header Subtitle',
+          title: 'Subtitle',
           name: 'subtitle',
           type: 'localeText'
         },
@@ -49,6 +49,39 @@ export default {
         {
           title: 'Content',
           name: 'content',
+          type: 'localeText'
+        }
+      ]
+    },
+    {
+      title: 'Environmental Impact Section',
+      name: 'environmentsection',
+      description: 'This section explains the impact of unsolicitied flyers on the environment.',
+      type: 'object',
+      fields: [
+        {
+          title: 'Title',
+          name: 'title',
+          type: 'localeString'
+        },
+        {
+          title: 'water',
+          name: 'water',
+          type: 'localeText'
+        },
+        {
+          title: 'electricity',
+          name: 'electricity',
+          type: 'localeText'
+        },
+        {
+          title: 'chemicals',
+          name: 'chemicals',
+          type: 'localeText'
+        },
+        {
+          title: 'wood',
+          name: 'wood',
           type: 'localeText'
         }
       ]

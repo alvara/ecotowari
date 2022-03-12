@@ -12,11 +12,11 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
          )}
          
        {title && (
-         <h1>{title}</h1>
+         <h1><pre>{title}</pre></h1>
          )}
          
        {subtitle && (
-         <p>{subtitle}</p>
+         <p><pre>{subtitle}</pre></p>
          )}
 
        {date && (

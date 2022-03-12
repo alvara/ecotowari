@@ -1,36 +1,31 @@
 import React from 'react'
 import InfoCard from '../widgets/InfoCard'
+import PropTypes from "prop-types"
+import {useRouter} from 'next/router'
 
-export default function EnvironmentImpact() {
+EnvironmentImpact.propTypes = {
+  data: PropTypes.object
+}
+
+export default function EnvironmentImpact({data}) {
+  const router = useRouter()
+
   return (
     <div className="row">
-      <span className="text-center preTitle">Environmental Impact</span>
-      <h2 className="text-center">Ecotowariとは</h2>
-        <div className="col-md-6">
-          <InfoCard 
-            title='Text Block 1 goes here'
-            content='content is here'
-          />
+      <span className="text-center preTitle">Impact On Environment</span>
+      <h2 className="text-center">{data.title[router.locale]}</h2>
+        <div className="col-md-6 border">
+          <pre>{data.water[router.locale]}</pre>
         </div>
-        <div className="col-md-6">
-          <InfoCard 
-            title='Text Block 2 goes here'
-            content='content is here'
-          />
+        <div className="col-md-6 border">
+          <pre>{data.electricity[router.locale]}</pre>
         </div>
-        <div className="col-md-6">
-          <InfoCard 
-            title='Text Block 3 goes here'
-            content='content is here'
-          />
+        <div className="col-md-6 border">
+            <pre>{data.chemicals[router.locale]}</pre>
         </div>
-        <div className="col-md-6">
-          <InfoCard 
-            title='Text Block 4 goes here'
-            content='content is here'
-          />
+        <div className="col-md-6 border">
+          <pre>{data.wood[router.locale]}</pre>
         </div>
-     
       </div>
   )
 }

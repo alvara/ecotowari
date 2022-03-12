@@ -96,7 +96,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
   const router = useRouter()
   console.log(homePage)
   
-  const {headersection, aboutsection} = homePage[0]
+  const {headersection, aboutsection, environmentsection} = homePage[0]
 
   return (
     <>
@@ -115,7 +115,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
         </div>
       </Container>
       <Container wrapperClass=" bg-2"><AboutEcotowari data={aboutsection}/></Container>
-      <Container wrapperClass="min-h-100 d-flex align-items-center"><EnvironmentImpact /></Container>
+      <Container wrapperClass="min-h-100 d-flex align-items-center"><EnvironmentImpact data={environmentsection} /></Container>
       <Container wrapperClass="min-h-100 bg-2"><Statistics stickers={stickers}/></Container>
       <Container wrapperClass="min-h-100"><GetStickerCTA/></Container>
       {/* <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container> */}

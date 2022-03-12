@@ -12,10 +12,10 @@ export default function AboutEcotowari({data}) {
 
   return (
     <div className="row">
-      <span className="text-center preTitle">{data.pretitle[router.locale]}</span>
+      <span className="text-center preTitle">Who We Are</span>
       <h2 className="text-center">{data.title[router.locale]}</h2>
         <div className="col-6">
-          {data.content[router.locale]}
+          <pre>{data.content[router.locale]}</pre>
         </div>
         <div className="col-6">
           {JSON.stringify(data.aboutImage, null, 2)}
