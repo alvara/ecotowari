@@ -1,4 +1,5 @@
 // main layout for all pages
+import React from 'react'
 import PropTypes from "prop-types"
 
 import Navbar from '../sections/Navbar'
@@ -10,7 +11,7 @@ export default function MainLayout({children}) {
   return (
     <>
       <Head>
-      <title>Home | Ecotowari</title>
+        <title>Home | Ecotowari</title>
       </Head>
       <Navbar/>
       <main>{children}</main>

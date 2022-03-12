@@ -88,9 +88,7 @@ Index.propTypes = {
 
 export default function Index({posts, stickers, igPosts, homePage}) {
   const router = useRouter()
-  console.log(router)
-  // console.log(locales)
-  // console.log(asPath)
+  console.log(homePage)
 
   return (
     <>
@@ -100,7 +98,6 @@ export default function Index({posts, stickers, igPosts, homePage}) {
             title={'One Sticker to protect our planet'}
             subtitle={'ecotowari is a green initiative to reduce paper waste. Our goal is to free your mailbox from unsolicited flyers. Think of it as a real-life spam filter!'}
           />
-          {`current locale is ${router.locale}`}
           
           <Link href={'/get-sticker'}><button className='btn'>Get a Sticker</button></Link>
 
