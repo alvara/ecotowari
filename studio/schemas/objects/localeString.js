@@ -10,7 +10,7 @@ export default {
     },
     {
       title: 'Japanese・日本語',
-      name: 'jp',
+      name: 'ja',
       type: 'string'
     },
   ]

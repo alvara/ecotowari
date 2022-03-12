@@ -88,7 +88,8 @@ Index.propTypes = {
 
 export default function Index({posts, stickers, igPosts, homePage}) {
   const router = useRouter()
-  console.log(homePage)
+  console.log(homePage[0].headersection)
+  console.log(router)
 
   return (
     <>

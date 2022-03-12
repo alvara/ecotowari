@@ -30,10 +30,10 @@ export default function Navbar() {
                         <Link href="/contact"><a className="nav-link">Contact</a></Link>
                     </li>
                     <li className="nav-item">
-                        <Link href={router.asPath} locale='ja-JP'><a className="nav-link">JP</a></Link>
+                        <Link href={router.asPath} locale='ja'><a className="nav-link">JP</a></Link>
                     </li>
                     <li className="nav-item">
-                        <Link href={router.asPath} locale='en-US'><a className="nav-link">EN</a></Link>
+                        <Link href={router.asPath} locale='en'><a className="nav-link">EN</a></Link>
                     </li>
                 </ul>
             </div>

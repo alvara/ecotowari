@@ -5,9 +5,9 @@
 module.exports = {
   i18n : {
     // locales supported by this applications
-    locales: ['ja-JP','en-US'],
+    locales: ['ja','en'],
     // default locale used when non-locale path visited
-    defaultLocale: "ja-JP"
+    defaultLocale: "ja"
   },
   images: {
     domains: ['via.placeholder.com','cdn.sanity.io','scontent-nrt1-1.cdninstagram.com']
