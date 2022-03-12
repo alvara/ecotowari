@@ -45,7 +45,7 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
 
       </div>
       <div className="col-md-6">
-      <Image src={'/mailbox-single.png'}  width="550" height="300" objectFit={'scale-down'} alt="Background" quality={50} priority={true} />
+      <Image src={'/mailbox-single.png'}  width="550" height="300" objectFit={'scale-down'} alt="Background" quality={10} priority={true} />
 
       </div>
     </div>

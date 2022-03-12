@@ -3,11 +3,9 @@ import React, {ReactElement} from "react"
 import client from '../client'
 import groq from 'groq'
 import Container from '../common/Container'
-import Link from "next/link"
 import Supabase from '../utils/supabase'
 import {useRouter} from 'next/router'
 // import Instagram from 'instagram-web-api'
-import Image from 'next/image'
 
 import MainLayout from '../modules/layouts/mainLayout'
 import HeroHeader from '../modules/sections/HeroHeader'
