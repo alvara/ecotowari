@@ -88,20 +88,19 @@ Index.propTypes = {
 
 export default function Index({posts, stickers, igPosts, homePage}) {
   const router = useRouter()
-  console.log(homePage[0].headersection)
-  console.log(router)
-  const content = homePage[0].headersection
+  
+  const {headersection} = homePage[0]
 
   return (
     <>
-      <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 d-flex flex-column justify-content-center">
+      <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 d-flex flex-column justify-headersection-center">
         <div>
           <HeroHeader 
-            title={content.title[router.locale]}
-            subtitle={content.subtitle[router.locale]}
+            title={headersection.title[router.locale]}
+            subtitle={headersection.subtitle[router.locale]}
           />
           
-          <Link href={content.buttonpath}><button className='btn'>{content.buttontext[router.locale]}</button></Link>
+          <Link href={headersection.buttonpath}><button className='btn'>{headersection.buttontext[router.locale]}</button></Link>
 
           <div className="bg-image-wrapper">        
             {/* <Image src={'/bg-wood.png'} layout="fill" objectFit={'contain'} alt="Background" quality={50} priority={true} /> */}

@@ -1,6 +1,14 @@
 import Link from 'next/link'
 import React from 'react'
 import {useRouter} from 'next/router'
+import cookieCutter from 'cookie-cutter'
+
+Navbar.getInitialProps = ({req}) => {
+    const isServer = !!req
+    const isBrowser = !req
+
+    console.log(isServer, isBrowser)
+}
 
 export default function Navbar() {
     const router = useRouter()
@@ -30,10 +38,10 @@ export default function Navbar() {
                         <Link href="/contact"><a className="nav-link">Contact</a></Link>
                     </li>
                     <li className="nav-item">
-                        <Link href={router.asPath} locale='ja'><a className="nav-link">JP</a></Link>
+                        <Link href={router.asPath} locale='ja'><a className="nav-link" onClick={()=>{cookieCutter.set('NEXT_LOCALE', 'ja', new Date(999999999999))}}>JP</a></Link>
                     </li>
                     <li className="nav-item">
-                        <Link href={router.asPath} locale='en'><a className="nav-link">EN</a></Link>
+                        <Link href={router.asPath} locale='en'><a className="nav-link" onClick={()=>{cookieCutter.set('NEXT_LOCALE', 'en')}}>EN</a></Link>
                     </li>
                 </ul>
             </div>
