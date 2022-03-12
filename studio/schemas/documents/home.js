@@ -4,6 +4,7 @@ export default {
   name: 'home-page',
   type: 'document',
   title: 'Home Page',
+  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'], 
   fields: [
     {
       title: 'Header Section',
@@ -12,12 +13,12 @@ export default {
       type: 'object',
       fields: [
         {
-          title: 'Title',
+          title: 'Header Title',
           name: 'title',
           type: 'localeString'
         },
         {
-          title: 'Subtitle',
+          title: 'Header Subtitle',
           name: 'subtitle',
           type: 'localeText'
         },

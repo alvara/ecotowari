@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React, {ReactElement} from "react"
-// import client from '../client'
-// import groq from 'groq'
+import client from '../client'
+import groq from 'groq'
 import Container from '../common/Container'
 import Link from "next/link"
 import Supabase from '../utils/supabase'
@@ -25,13 +25,12 @@ Index.getLayout = function getStaticProps(page: ReactElement) {
   )
 }
 
-Index.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.object),
-  stickers: PropTypes.arrayOf(PropTypes.object),
-  igPosts: PropTypes.arrayOf(PropTypes.object),
-}
-
 export async function getStaticProps() {
+  // query for home page content
+   const homePage = await client.fetch(groq`
+      *[_type == "home-page"] | order(publishedAt desc)
+    `)
+
     // Query For news posts
     // const portfolio = await client.fetch(groq`
     //   *[_type == "portfolio"]{
@@ -74,13 +73,21 @@ export async function getStaticProps() {
   return {
     props: {
       stickers,
+      homePage
       // igPosts: igPosts.user.edge_owner_to_timeline_media.edges || []
     }
   }
 }
 
+Index.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object),
+  stickers: PropTypes.arrayOf(PropTypes.object),
+  igPosts: PropTypes.arrayOf(PropTypes.object),
+  homePage: PropTypes.arrayOf(PropTypes.object)
+}
 
-export default function Index({posts, stickers, igPosts}) {
+export default function Index({posts, stickers, igPosts, homePage}) {
+  console.log(homePage)
 
   return (
     <>

@@ -6,10 +6,10 @@ const hiddenDocTypes = (listItem) => !['page', 'route', 'site-config', 'home-pag
 
 export default () =>
   S.list()
-    .title('Site')
+    .title('Ecotowari Site')
     .items([
-      S.documentListItem().id('global-config').schemaType('site-config').title('Site config'),
-      S.documentListItem().id('home-page').schemaType('home-page').title('Home Page'),
+      S.listItem().title('Home Page').child(S.document().schemaType('home-page').documentId('home-page')),
+      S.documentListItem().id('global-config').schemaType('site-config').title('Global Config'),
       // S.documentTypeListItem('route').title('Routes'),
       // ...S.documentTypeListItems().filter(hiddenDocTypes),
     ])
