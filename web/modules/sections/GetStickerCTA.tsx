@@ -12,7 +12,7 @@ export default function GetStickerCTA({data}) {
   const router = useRouter()
 
   return (
-    <div className="row">
+    <div id="sticker" className="row">
       <span className="text-center preTitle">Get a sticker</span>
       <h2 className="text-center">{data.title[router.locale]}</h2>
         <div className="offset-md-2 col-md-8">

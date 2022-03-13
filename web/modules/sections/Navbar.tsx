@@ -27,7 +27,7 @@ export default function Navbar() {
                         <Link href="/mission"><a className="nav-link">{router.locale === 'ja' ? '我々の活動' : 'Our Mission'}</a></Link>
                     </li>
                     <li className="nav-item">
-                        <Link href="/get-sticker"><a className="nav-link">{router.locale === 'ja' ? 'ステッカーの入手' : 'Get Sticker'}</a></Link>
+                        <Link href="/#sticker"><a className="nav-link">{router.locale === 'ja' ? 'ステッカーの入手' : 'Get Sticker'}</a></Link>
                     </li>
                     {/* <li className="nav-item">
                         <Link href="/news"><a className="nav-link">{router.locale === 'ja' ? '最新情報' : 'Latest News'}</a></Link>

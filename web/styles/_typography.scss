@@ -26,11 +26,11 @@ strong {
 
 // optional custom heading that appears above typical heading tags
 .preTitle {
-  font-size: 1.7rem;
-  color: lighten($headings-color, 40%);
+  font-size: 1.2rem;
+  color: $font-primary;
   margin: 16px 0 8px 0;
   font-family: 'Work Sans', Sans-Serif;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 // optional custom heading that appears below typical heading tags
