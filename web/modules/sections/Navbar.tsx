@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import {useRouter} from 'next/router'
 import cookieCutter from 'cookie-cutter'
+import Image from 'next/image'
 
 export default function Navbar() {
     const router = useRouter()
@@ -9,7 +10,11 @@ export default function Navbar() {
     return (
     <nav className="navbar navbar-expand-md navbar-light border-bottom">
         <div className="container">
-        <Link href="/"><a className="navbar-brand">Ecotowari</a></Link>
+        <Link href="/">
+            <a className="navbar-brand">
+               <Image src={'/ecotowari-logo.png'}  width="125" height="40" objectFit={'scale-down'} alt="Background" quality={10} priority={true} />
+            </a>
+            </Link>
             <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
