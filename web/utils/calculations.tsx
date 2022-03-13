@@ -15,7 +15,7 @@ export function totalDaysDeployed(stickers: {qty: number, started_at: Date}[]):n
 
 // returns avg weight of flyers wasted per day
 export function avgWastePerDay(): number {
-  const avgWastePerWeek = 80 // TODO: calc avg weight of flyers wasted per week through studies
+  const avgWastePerWeek = 85 // TODO: calc avg weight of flyers wasted per week through studies
   return avgWastePerWeek / 7
 }
 

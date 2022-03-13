@@ -27,17 +27,3 @@
     height: unset !important;
   }
 }
-
-.header-wrapper {
-  // color: white;
-  position: relative;
-  z-index: 4;
-  background-image: url('/mailbox.png');
-
-   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
