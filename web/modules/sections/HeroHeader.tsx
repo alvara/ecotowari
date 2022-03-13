@@ -41,7 +41,7 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
           <span className='pill mini' key={tag}>{tag}</span>
         ))}
 
-        <Link href={buttonPath}><button className='btn mb-3'>{buttonText}</button></Link>
+        <Link href={buttonPath}><button className='btn mb-3'>{buttonText}  <span className='btn-carrot'>›</span></button></Link>
 
       </div>
       <div className="col-md-6">
