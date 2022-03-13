@@ -13,11 +13,18 @@ export function totalDaysDeployed(stickers: {qty: number, started_at: Date}[]):n
   return totalDays
 }
 
-// number of stickers
-// export function avgWastePerDay(): number {
-//   const avgWastePerWeek = 85 // TODO: calc avg weight of flyers wasted per week through studies
-//   return avgWastePerWeek / 7
-// }
+// return number of stickers deployed
+export function totalStickers(stickers: {qty: number, started_at: Date}[]):number {
+  let total = 0
+
+  // loop through stickers to get sum of all stickers
+  stickers.forEach((sticker) => {
+    total += sticker.qty
+  })
+
+  return total
+}
+
 // returns avg weight of flyers wasted per day
 export function avgWastePerDay(): number {
   const avgWastePerWeek = 85 // TODO: calc avg weight of flyers wasted per week through studies

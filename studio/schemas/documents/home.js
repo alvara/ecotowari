@@ -108,6 +108,11 @@ export default {
           type: 'localeText'
         },
         {
+          title: 'Total Stickers',
+          name: 'totalstickers',
+          type: 'localeString'
+        },
+        {
           title: 'water',
           name: 'water',
           type: 'localeString'
