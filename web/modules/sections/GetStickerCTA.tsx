@@ -21,7 +21,18 @@ export default function GetStickerCTA({data}) {
             <pre>{data.content[router.locale]}</pre>
           </p>
           <div className="text-center">
-            <Link href={'/'}><button className='btn '>{data.buttontext[router.locale]}</button></Link>
+            <form name="contact" method="post">
+              <input type="hidden" name="form-name" value="contact" />
+              <p>
+                <label>Your Name: <input type="text" name="name"/></label>
+              </p>
+              <p>
+                <label>Your Email: <input type="email" name="email"/></label>
+              </p>
+              <p>
+                <button type="submit" className='btn'>{data.buttontext[router.locale]}</button>
+              </p>
+            </form>
           </div>
         </div>
       </div>
