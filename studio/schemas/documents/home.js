@@ -65,6 +65,11 @@ export default {
           type: 'localeString'
         },
         {
+          title: 'Content',
+          name: 'content',
+          type: 'localeText'
+        },
+        {
           title: 'water',
           name: 'water',
           type: 'localeText'
