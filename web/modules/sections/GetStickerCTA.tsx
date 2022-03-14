@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from "prop-types"
 import {useRouter} from 'next/router'
 import Image from 'next/image'
-import Link from 'next/link'
+import MailchimpSubscribe from "react-mailchimp-subscribe"
 
 GetStickerCTA.propTypes = {
   data: PropTypes.object
@@ -10,6 +10,9 @@ GetStickerCTA.propTypes = {
 
 export default function GetStickerCTA({data}) {
   const router = useRouter()
+
+  const url = "https://ecotowari.us14.list-manage.com/subscribe/post?u=fb888509b6f45d3e61ff06e47&amp;id=5ec65eaa39";
+
 
   return (
     <div id="sticker" className="row">
@@ -20,15 +23,8 @@ export default function GetStickerCTA({data}) {
           <p>
             <pre>{data.content[router.locale]}</pre>
           </p>
-          <div className="text-center">
-    
-          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-            {/* You still need to add the hidden input with the form name to your JSX form */}
-            <input type="hidden" name="form-name" value="contact" />
-            <label>Your Email: <input type="email" name="email"/></label>
-
-            <button type="submit" className='btn'>{data.buttontext[router.locale]}</button>
-          </form>
+          <div className="text-center mailingList">
+            <MailchimpSubscribe url={url}/>
           </div>
         </div>
       </div>

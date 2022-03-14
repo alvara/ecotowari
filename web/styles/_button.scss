@@ -1,4 +1,4 @@
-.btn {
+.btn, button {
   background-color: $primary;
   color: white;
   padding: 16px 24px;
@@ -16,4 +16,11 @@
   &:hover {
     background-color: lighten($primary, 10%);
   }
+}
+
+input {
+  padding: 16px 24px;
+  border-radius: 32px;
+  border: 1px solid $border-color;
+  margin-right: 8px;
 }
