@@ -11,15 +11,23 @@ HeroHeader.propTypes = {
   date: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   img: PropTypes.string,
-  orientation: PropTypes.string,
   buttonPath: PropTypes.string,
   buttonText: PropTypes.string,
+  textAlign: PropTypes.string
 };
 
-export default function HeroHeader({preTitle, title, subtitle, date, tags = [], img, orientation = 'portrait', buttonPath = '/', buttonText}) {
+export default function HeroHeader({
+  preTitle, 
+  title,
+  subtitle, 
+  date, 
+  tags = [], 
+  img, 
+  textAlign = 'start', // align text to center or left. left by default
+  buttonPath = '/', buttonText}) {
   return (
-    <div className="row header justify-content-center align-items-center text-center text-md-start">
-      <div className="col-md-6">
+    <div className={`row header justify-content-center align-items-center text-center ${textAlign === 'center' ? 'text-md-center' : 'text-md-start'}`}>
+      <div className={`${textAlign === 'center' ? 'col-md-12' : 'col-md-6'}`}>
 
        {preTitle && (
          <span className='preTitle'>{preTitle}</span>

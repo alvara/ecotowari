@@ -26,16 +26,19 @@ export async function getStaticProps() {
 
 const Contact = ({contactPage}) => {
   const router = useRouter()
-  const {headersection} = contactPage[0]
+  const {headersection, formsection} = contactPage[0]
 
   return (
     <>
-      <Container wrapperClass="d-flex align-items-center header-wrapper" className="d-flex flex-column justify-content-center">
+      <Container wrapperClass="header-wrapper" className="d-flex flex-column justify-content-center">
         <HeroHeader 
           title={headersection.title[router.locale]}
-          subtitle={headersection.subtitle[router.locale]}
+          subtitle={'Contact the ecotowari team'}
+          textAlign="center"
         />
       </Container>
+      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><ContactUs data={formsection}/></Container>
+
     </>
   )
 }
