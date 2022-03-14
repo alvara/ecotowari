@@ -26,11 +26,6 @@ Index.getLayout = function getStaticProps(page: ReactElement) {
 }
 
 export async function getStaticProps() {
-  // query global settings
-//   const siteConfig = await client.fetch(groq`
-//   *[_type == "site-config"] | order(publishedAt desc)
-// `)
-
   // query for home page content
    const homePage = await client.fetch(groq`
       *[_type == "home-page"]{'aboutImage': aboutsection.image.asset->url, ...} | order(publishedAt desc)
@@ -94,6 +89,7 @@ Index.propTypes = {
 export default function Index({posts, stickers, igPosts, homePage}) {
   const router = useRouter()
   
+  // sanity data for each section in the page
   const {
     headersection, 
     aboutsection, 
@@ -105,26 +101,21 @@ export default function Index({posts, stickers, igPosts, homePage}) {
 
   return (
     <>
-        <div className='header-wrapper'>
-          <Container wrapperClass="d-flex align-items-center" className="h-100 d-flex flex-column justify-content-center">
-              <HeroHeader 
-                title={headersection.title[router.locale]}
-                subtitle={headersection.subtitle[router.locale]}
-                buttonPath={headersection.buttonpath[router.locale]}
-                buttonText={headersection.buttontext[router.locale]}
-              />
-
-              <div className='bg-overlay'></div>
-          </Container>
-        </div>
+      <Container wrapperClass="d-flex align-items-center header-wrapper" className="h-100 d-flex flex-column justify-content-center">
+        <HeroHeader 
+          title={headersection.title[router.locale]}
+          subtitle={headersection.subtitle[router.locale]}
+          buttonPath={headersection.buttonpath[router.locale]}
+          buttonText={headersection.buttontext[router.locale]}
+          img={'/mailbox-single.png'}
+        />
+      </Container>
       <Container wrapperClass="bg-2"><AboutEcotowari data={aboutsection}/></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center"><EnvironmentImpact data={environmentsection} /></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Statistics stickers={stickers} data={statisticsection}/></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center"><GetStickerCTA data={ctasection}/></Container>
       {/* <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container> */}
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><FollowUs igPosts={igPosts} data={followsection}/></Container>
-      {/* <Container wrapperClass="min-h-100 d-flex align-items-center"><MySkills tags={showcaseTags}/></Container> */}
-      {/* <Container wrapperClass="vh-100" className="h-100"><ContactMe /></Container> */}
     </>
   )
 }

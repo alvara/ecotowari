@@ -41,12 +41,17 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
           <span className='pill mini' key={tag}>{tag}</span>
         ))}
 
-        <Link href={buttonPath}><button className='btn mb-3'>{buttonText}  <span className='btn-carrot'>›</span></button></Link>
+        {buttonPath && buttonText && (
+          <Link href={buttonPath}><button className='btn mb-3'>{buttonText}  <span className='btn-carrot'>›</span></button></Link>
+        )}
 
       </div>
       <div className="col-md-6">
-      <Image src={'/mailbox-single.png'}  width="550" height="300" objectFit={'scale-down'} alt="Background" quality={10} priority={true} />
+        {img && (
+          <Image src={img}  width="550" height="300" objectFit={'scale-down'} alt="Background" quality={10} priority={true} />
+        )}
       </div>
+      <div className='bg-overlay'></div>
     </div>
   )
 }
