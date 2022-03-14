@@ -21,18 +21,14 @@ export default function GetStickerCTA({data}) {
             <pre>{data.content[router.locale]}</pre>
           </p>
           <div className="text-center">
-            <form name="contact" method="post">
-              <input type="hidden" name="form-name" value="contact" />
-              <p>
-                <label>Your Name: <input type="text" name="name"/></label>
-              </p>
-              <p>
-                <label>Your Email: <input type="email" name="email"/></label>
-              </p>
-              <p>
-                <button type="submit" className='btn'>{data.buttontext[router.locale]}</button>
-              </p>
-            </form>
+    
+          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+            {/* You still need to add the hidden input with the form name to your JSX form */}
+            <input type="hidden" name="form-name" value="contact" />
+            <label>Your Email: <input type="email" name="email"/></label>
+
+            <button type="submit" className='btn'>{data.buttontext[router.locale]}</button>
+          </form>
           </div>
         </div>
       </div>
