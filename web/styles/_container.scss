@@ -1,11 +1,54 @@
 // settings for customization
 $container-padding: 56px;
 
+.container-wrapper {
+  padding-top: $container-padding;
+  padding-bottom: $container-padding;
+}
+
 .bg-2 {
   background-color: $body-bg-2; 
 }
 
-.container-wrapper {
-  padding-top: $container-padding;
-  padding-bottom: $container-padding;
+.bg-3 {
+  background: #2a9451;  /* fallback colour. Make sure this is just one solid colour. */
+  background: -webkit-linear-gradient(90deg,rgb(21, 111, 92,0.9),rgb(42, 147, 80,0.9));
+  // background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); /* The least supported option. */
+  color: white;
+
+  h2 {
+    color: white;
+  }
+
+  .preTitle {
+    color: rgba(144, 238, 144, 0.392);
+  }
+}
+
+
+.header-wrapper {
+  // color: white;
+  position: relative;
+  z-index: 4;
+  background-image: url('/stars.png');
+
+   /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-overlay {
+  z-index: -2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin:0;
+  padding:0;
+  position: absolute;
+  background: #2a9451;  /* fallback colour. Make sure this is just one solid colour. */
+  background: -webkit-linear-gradient(90deg,rgb(21, 111, 92,0.9),rgb(42, 147, 80,0.9));
+  // background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); /* The least supported option. */
 }
