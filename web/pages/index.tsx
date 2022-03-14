@@ -117,10 +117,10 @@ export default function Index({posts, stickers, igPosts, homePage}) {
               <div className='bg-overlay'></div>
           </Container>
         </div>
-      <Container wrapperClass=" bg-2"><AboutEcotowari data={aboutsection}/></Container>
+      <Container wrapperClass="bg-2"><AboutEcotowari data={aboutsection}/></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center"><EnvironmentImpact data={environmentsection} /></Container>
       <Container wrapperClass="min-h-100 bg-2  d-flex align-items-center"><Statistics stickers={stickers} data={statisticsection}/></Container>
-      <Container wrapperClass="min-h-100"><GetStickerCTA data={ctasection}/></Container>
+      <Container wrapperClass="min-h-100 d-flex align-items-center"><GetStickerCTA data={ctasection}/></Container>
       {/* <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container> */}
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><FollowUs igPosts={igPosts} data={followsection}/></Container>
       {/* <Container wrapperClass="min-h-100 d-flex align-items-center"><MySkills tags={showcaseTags}/></Container> */}
