@@ -21,29 +21,28 @@ export default function EnvironmentImpact({data}) {
         <div className="col-md-6 p-5 bg-primary">
           <div className="d-flex align-items-center text-white">
             <FontAwesomeIcon icon={faDroplet} size="lg" className='environment-icon'/>
-            <h3 className="text-white">Water</h3>
+            <h3 className="text-white">{data.watertitle[router.locale]}</h3>
           </div>
           <pre className='text-white'>{data.water[router.locale]}</pre>
         </div>
         <div className="col-md-6 p-5 border">
           <div className='d-flex align-items-center textiwhite'>
             <FontAwesomeIcon icon={faLightbulb} className='environment-icon text-primary'/>
-            <h3 className="text-primary">Electricity</h3>
+            <h3 className="text-primary">{data.electricitytitle[router.locale]}</h3>
           </div>
           <pre className='text-primary'>{data.electricity[router.locale]}</pre>
         </div>
         <div className="col-md-6 p-5 border">
           <div className='d-flex align-items-center textiwhite'>
             <FontAwesomeIcon icon={faFlask} className='environment-icon text-primary'/>
-            <h3 className="text-primary">Water</h3>
+            <h3 className="text-primary">{data.chemicalstitle[router.locale]}</h3>
           </div>
           <pre className='text-primary'>{data.chemicals[router.locale]}</pre>
         </div>
         <div className="col-md-6 p-5 bg-primary">
           <div className='d-flex align-items-center textiwhite'>
             <FontAwesomeIcon icon={faTree} className='environment-icon text-white'/>
-            <h3 className="text-white">Water</h3>
-
+            <h3 className="text-white">{data.woodtitle[router.locale]}</h3>
           </div>
           <pre className='text-white'>{data.wood[router.locale]}</pre>
         </div>

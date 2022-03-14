@@ -70,22 +70,42 @@ export default {
           type: 'localeText'
         },
         {
-          title: 'water',
+          title: 'Water Title',
+          name: 'watertitle',
+          type: 'localeString'
+        },
+        {
+          title: 'Water',
           name: 'water',
           type: 'localeText'
         },
         {
-          title: 'electricity',
+          title: 'Electricity Title',
+          name: 'electricitytitle',
+          type: 'localeString'
+        },
+        {
+          title: 'Electricity',
           name: 'electricity',
           type: 'localeText'
         },
         {
-          title: 'chemicals',
+          title: 'Chemicals Title',
+          name: 'chemicalstitle',
+          type: 'localeString'
+        },
+        {
+          title: 'Chemicals',
           name: 'chemicals',
           type: 'localeText'
         },
         {
-          title: 'wood',
+          title: 'Wood Title',
+          name: 'woodtitle',
+          type: 'localeString'
+        },
+        {
+          title: 'Wood',
           name: 'wood',
           type: 'localeText'
         }
