@@ -23,9 +23,9 @@ export default function Navbar() {
             
                 </ul>
                 <ul className="navbar-nav ms-auto">
-                    <li className="nav-item active">
-                        <Link href="/mission"><a className="nav-link">{router.locale === 'ja' ? '我々の活動' : 'Our Mission'}</a></Link>
-                    </li>
+                    {/* <li className="nav-item active">
+                        <Link href="/mission"><a className="nav-link">{router.locale === 'ja' ? '我々の活動' : 'Impact Of Flyers'}</a></Link>
+                    </li> */}
                     <li className="nav-item">
                         <Link href="/#sticker"><a className="nav-link">{router.locale === 'ja' ? 'ステッカーの入手' : 'Get Sticker'}</a></Link>
                     </li>
