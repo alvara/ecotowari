@@ -1,51 +1,48 @@
 import React, {ReactElement} from 'react'
 import groq from 'groq'
 import PropTypes from "prop-types"
+import {useRouter} from 'next/router'
 
 import client from '../client'
 import MainLayout from '../modules/layouts/mainLayout'
 import Container from '../common/Container'
 import HeroHeader from '../modules/sections/HeroHeader'
-import InfoCard from '../modules/widgets/InfoCard'
+import ContactUs from '../modules/sections/ContactUs'
+
+export async function getStaticProps() {
+
+  const contactPage = await client.fetch(groq`
+      *[_type == "contact-page"] | order(publishedAt desc)
+    `)
+
+  return {
+    props: {
+      contactPage
+    }
+  }
+}
 
 
-// view all blog posts
-const Contact = ({posts}) => {
+
+const Contact = ({contactPage}) => {
+  const router = useRouter()
+  const {headersection} = contactPage[0]
+
   return (
-    <div>
-      <Container wrapperClass="vh-100-w-nav" className="h-100 text-center">
-        <div>
-      <HeroHeader 
-        title={'Contact'}
-        subtitle={'contact details goes here'}
-      />
-   <Container className='text-center'>
-      <div className='row row-cols-md-2 row-cols-lg-3'>
-      {posts.length > 0 && posts.map(
-        ({_id, title = '', slug, publishedAt = '', mainImage, categories}) =>
-            (
-            <div  key={`${_id}`} >
-              <InfoCard 
-                className='postCard'
-                mainImage={mainImage}
-                href={"/Contact/[slug]"}
-                as={`/Contact/${slug.current}`} 
-                title={title} 
-                tags={categories}
-                subtitle={new Date(publishedAt).toDateString()}
-                height={140}
-              />
-            </div>
-          )
-        )}
-      </div>
-    </Container>
-    </div>
-
-    </Container>  
-    </div>
+    <>
+      <Container wrapperClass="d-flex align-items-center header-wrapper" className="d-flex flex-column justify-content-center">
+        <HeroHeader 
+          title={headersection.title[router.locale]}
+          subtitle={headersection.subtitle[router.locale]}
+        />
+      </Container>
+    </>
   )
 }
+
+Contact.propTypes = {
+  contactPage: PropTypes.arrayOf(PropTypes.object),
+};
 
 // Get the main template for standard pages
 Contact.getLayout = function getLayout(page: ReactElement) {
@@ -54,41 +51,6 @@ Contact.getLayout = function getLayout(page: ReactElement) {
       {page}
     </MainLayout>
   )
-}
-
-Contact.propTypes = {
-  posts: PropTypes.arrayOf(PropTypes.object),
-};
-
-
-
-
-export async function getStaticProps() {
-  const posts = await client.fetch(groq`
-  *[_type == "post" && publishedAt < now()][0..2]{
-    "author": author->name,
-    "categories": categories[]->{
-      _id,
-      title
-    },
-    content,
-    publishedAt,
-    slug,
-    title,
-    _createdAt,
-    _id,
-    "mainImage": mainImage.asset->url,
-    _rev,
-    _type,
-    _updateAt,
-    "authorImg": author->image,
-  } | order(publishedAt desc)
-`)
-  return {
-    props: {
-      posts
-    }
-  }
 }
 
 export default Contact;

@@ -79,17 +79,16 @@ export async function getStaticProps() {
 }
 
 Index.propTypes = {
+  homePage: PropTypes.arrayOf(PropTypes.object),
   posts: PropTypes.arrayOf(PropTypes.object),
   stickers: PropTypes.arrayOf(PropTypes.object),
   igPosts: PropTypes.arrayOf(PropTypes.object),
-  // siteConfig: PropTypes.arrayOf(PropTypes.object),
-  homePage: PropTypes.arrayOf(PropTypes.object),
 }
 
 export default function Index({posts, stickers, igPosts, homePage}) {
   const router = useRouter()
   
-  // sanity data for each section in the page
+  // deconstruct data for each section in the page
   const {
     headersection, 
     aboutsection, 
