@@ -18,21 +18,21 @@ export default function EnvironmentImpact({data}) {
       <p>
       {data.content[router.locale]}
       </p>
-        <div className="col-md-6 p-5 border">
-          <FontAwesomeIcon icon={faDroplet} size="lg" className='environment-icon'/>
-          <pre>{data.water[router.locale]}</pre>
+        <div className="col-md-6 p-5 bg-primary">
+          <FontAwesomeIcon icon={faDroplet} size="lg" className='environment-icon text-white'/>
+          <pre className='text-white'>{data.water[router.locale]}</pre>
         </div>
         <div className="col-md-6 p-5 border">
-          <FontAwesomeIcon icon={faLightbulb} className='environment-icon'/>
-          <pre>{data.electricity[router.locale]}</pre>
+          <FontAwesomeIcon icon={faLightbulb} className='environment-icon text-primary'/>
+          <pre className='text-primary'>{data.electricity[router.locale]}</pre>
         </div>
         <div className="col-md-6 p-5 border">
-            <FontAwesomeIcon icon={faFlask} className='environment-icon'/>
-            <pre>{data.chemicals[router.locale]}</pre>
+            <FontAwesomeIcon icon={faFlask} className='environment-icon text-primary'/>
+            <pre className='text-primary'>{data.chemicals[router.locale]}</pre>
         </div>
-        <div className="col-md-6 p-5 border">
-            <FontAwesomeIcon icon={faTree} className='environment-icon'/>
-          <pre>{data.wood[router.locale]}</pre>
+        <div className="col-md-6 p-5 bg-primary">
+            <FontAwesomeIcon icon={faTree} className='environment-icon text-white'/>
+          <pre className='text-white'>{data.wood[router.locale]}</pre>
         </div>
       </div>
   )
