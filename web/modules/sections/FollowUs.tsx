@@ -18,8 +18,18 @@ export default function FollowUs({igPosts,data}) {
       <pre className="text-center">{data.content[router.locale]}</pre>
 
       <div className="text-center">
-        <a target="_window"><FontAwesomeIcon icon={faFacebook} size="lg" className='social-icon'/></a>
-        <FontAwesomeIcon icon={faInstagram} size="lg" className='social-icon'/>
+        <Link href={`${data.instagram}`}>
+          <a target="_window">
+            <FontAwesomeIcon icon={faInstagram} size="lg" className='social-icon'/>
+          </a>
+        </Link>
+
+        <Link href={`${data.facebook}`}>
+          <a target="_window">
+            <FontAwesomeIcon icon={faFacebook} size="lg" className='social-icon'/>
+          </a>
+        </Link>
+
       </div>
 
         <div className="row row-cols-4">
