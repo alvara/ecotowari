@@ -34,11 +34,11 @@ export default function HeroHeader({
          )}
          
        {title && (
-         <h1><pre>{title}</pre></h1>
+         <h1>{title}</h1>
          )}
          
        {subtitle && (
-         <p><pre>{subtitle}</pre></p>
+        <pre>{subtitle}</pre>
          )}
 
        {date && (
@@ -50,23 +50,13 @@ export default function HeroHeader({
         ))}
 
         {buttonPath && buttonText && (
-          <Link href={buttonPath}  ><button className='btn mb-3'>{buttonText}  <span className='btn-carrot'>›</span></button></Link>
+          <Link href={buttonPath}><button className='btn mb-3'>{buttonText}  <span className='btn-carrot'>›</span></button></Link>
         )}
 
       </div>
       <div className="col-md-6">
         {img && (
-          <Image 
-            src={img}  
-            blurDataURL={img} 
-            placeholder="blur"
-            width="550" 
-            height="300" 
-            objectFit={'scale-down'} 
-            alt="Background" 
-            quality={10} 
-            priority={true} 
-          />
+          <Image src={img}  width="550" height="300" objectFit={'scale-down'} alt="Background" quality={10} priority={true} />
         )}
       </div>
       <div className='bg-overlay'></div>

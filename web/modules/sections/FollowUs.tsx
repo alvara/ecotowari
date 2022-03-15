@@ -14,23 +14,20 @@ export default function FollowUs({igPosts,data}) {
     <div className="row">
       <span className="text-center preTitle">#ecotowari</span>
       <h2 className="text-center">{data.title[router.locale]}</h2>
-      <p className="text-center"><pre>{data.content[router.locale]}</pre></p>
+      <pre className="text-center">{data.content[router.locale]}</pre>
         <div className="row row-cols-4">
           {igPosts && igPosts.map((post) => (
             <div key={post.node.shortcode} className="col">
               <Link href={`https://www.instagram.com/p/${post.node.shortcode}`} passHref={true}>
                 <a><Image 
                       src={post.node.thumbnail_src} 
-                      blurDataURL={post.node.thumbnail_src} 
-                      placeholder="blur"
                       width="250" 
                       height="250" 
                       layout="responsive" 
                       objectFit='scale-down' 
                       alt="test" 
                       className=""
-                      quality={30}
-                    /></a>
+                       quality={30}/></a>
               </Link>
             </div>
           )
