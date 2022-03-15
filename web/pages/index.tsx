@@ -5,7 +5,7 @@ import groq from 'groq'
 import Container from '../common/Container'
 import Supabase from '../utils/supabase'
 import {useRouter} from 'next/router'
-// import Instagram from 'instagram-web-api'
+import Instagram from 'instagram-web-api'
 
 import MainLayout from '../modules/layouts/mainLayout'
 import HeroHeader from '../modules/sections/HeroHeader'
@@ -51,17 +51,16 @@ export async function getStaticProps() {
     // `)
 
     // // login to instagram
-    // const username = process.env.INSTAGRAM_USERNAME
-    // const password = process.env.INSTAGRAM_PSW
-    // const igClient = new Instagram({username, password})
-    // await igClient.login()
+    const username = process.env.INSTAGRAM_USERNAME
+    const password = process.env.INSTAGRAM_PSW
+    const igClient = new Instagram({username, password})
+    await igClient.login()
   
     // // get latest instagram Posts
-    // const igPosts = await igClient.getPhotosByUsername({
-    //   username: process.env.INSTAGRAM_USERNAME,
-    //   first: 8,
-    //   after: 
-    // })
+    const igPosts = await igClient.getPhotosByUsername({
+      username: process.env.INSTAGRAM_USERNAME,
+      first: 8,
+    })
 
     // sticker data from supabase
     const {data: stickers, error} = await Supabase.from('stickers').select('qty, started_at')
@@ -72,8 +71,8 @@ export async function getStaticProps() {
   return {
     props: {
       stickers,
-      homePage
-      // igPosts: igPosts.user.edge_owner_to_timeline_media.edges || []
+      homePage,
+      igPosts: igPosts.user.edge_owner_to_timeline_media.edges || []
     }
   }
 }
