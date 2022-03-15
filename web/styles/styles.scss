@@ -26,6 +26,9 @@ $border-color: lighten($gray-900, 73%);
 $input-padding: 16px 24px;
 $input-radius: 32px;
 
+// special elements
+$card-shadow: 0 1px 3px 0 rgb(0 0 0 / 11%);
+
 body {
   /*  expand body to fill page heigth  */
 	min-height: 100vh;

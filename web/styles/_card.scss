@@ -1,6 +1,11 @@
+.card-shadow {
+  box-shadow: $card-shadow;
+}
+
 .card {
   background-color: #fff;
   padding: 32px;
   border-radius: 8px;
   margin-bottom: 16px;
+  box-shadow: $card-shadow;
 }

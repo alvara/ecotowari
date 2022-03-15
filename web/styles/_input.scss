@@ -14,13 +14,17 @@ label {
 
 .mailingList div {
   display: flex;
+  justify-content: center;
 
   input {
     margin-bottom: 0;
     margin-right: 8px;
+    max-width: 400px;
   }
 
   button {
-    flex: 1;align-self: flex-start;  
+    flex: 1;
+    align-self: flex-start;  
+    flex-grow: 0;
   }
 }
