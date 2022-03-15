@@ -50,7 +50,7 @@ export default function HeroHeader({
         ))}
 
         {buttonPath && buttonText && (
-          <Link href={buttonPath} passHref={true} ><button className='btn mb-3'>{buttonText}  <span className='btn-carrot'>›</span></button></Link>
+          <Link href={buttonPath}  ><button className='btn mb-3'>{buttonText}  <span className='btn-carrot'>›</span></button></Link>
         )}
 
       </div>

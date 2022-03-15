@@ -104,7 +104,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
         <HeroHeader 
           title={headersection.title[router.locale]}
           subtitle={headersection.subtitle[router.locale]}
-          buttonPath={headersection.buttonpath[router.locale]}
+          buttonPath={headersection.buttonpath}
           buttonText={headersection.buttontext[router.locale]}
           img={'/mailbox-single.png'}
         />
