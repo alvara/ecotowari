@@ -1,30 +1,98 @@
-# Ecotowari
+<div id="top"></div>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-_SEO friendly page builder in React.js. Heroes, sign-up forms and calls to action._
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-Deployed from [sanity.io/create](https://www.sanity.io/create/?template=sanity-io%2Fsanity-template-nextjs-landing-pages).
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-## What you have
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <h1 align="center">GymCoach AI</h1>
+  
+  <img src="preview.png" width="400">
+  <br />
 
-- A dynamic frontend with [Next.js](https://nextjs.org)
-- Structured content using [Sanity.io](https://www.sanity.io)
-- Global deployment on [Netlify](https://netlify.com)
+  <strong align="center">
+    Ecotowari is a green initiative to reduce paper waste. Our goal is to free Japan mailboxes from unsolicited flyers. Think of it as a real-life spam filter!
+<br/><br/>
+   <a href="https://github.com/alvara/ecotowari/issues">Report Bug</a>・
+   <a href="https://github.com/alvara/ecotowari/issues">Request Feature</a>
+  </strong>
+</div>
+<hr>
 
-## Quick start
+<!-- ABOUT THE PROJECT -->
+## Learn More
+You can learn more details about the purpose and development of this project [here](https://jessealvarado.com/portfolio/ecotowari)
 
+## Built With
+
+This project was built with the following technology:
+
+* Server-side rendering with [Next.js](https://nextjs.org/)
+* Developed in [React.js](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/)
+* Styled with [Bootstrap](https://getbootstrap.com)
+* Content hosted by [SanityIO](https://www.sanity.io/)
+* Data collected and managed with PostgresDB on [Supabase](https://supabase.com/)
+* Hosting & Deployment via [Netlify](https://netlify.com)
+
+## How to Get Started
 1. Clone this repository
-2. `npm install` in the project root folder on local
-3. `npm run dev` to start the studio and frontend locally
-   - Your studio should be running on [http://localhost:3333](http://localhost:3333)
-   - Your frontend should be running on [http://localhost:3000](http://localhost:3000)
-4. `npm run build` to build to production locally
+2. `rails db:migrate`
+3. create user account 
+4. `rails db:seed`
+5. `bundle install`
+6. `yarn install`
+7. Create a `.env` file, 
+8. add an openai key: `OPENAI_ACCESS_TOKEN=access_token_goes_here`
 
-## Deploy changes
+Note that you will need to create your own account to access GPT-3's API. 
 
-Netlify automatically deploys new changes commited to master on GitHub. If you want to change deployment branch, do so in [build & deploy settings on Netlify](https://www.netlify.com/docs/continuous-deployment/#branches-deploys).
+<!-- LICENSE -->
+## License
 
-## Stuck? Get help
+Distributed under the MIT License.
+* [View licenses](https://choosealicense.com)
 
-[![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
+<!-- CONTACT -->
+## Contact Developer
 
-Join [Sanity’s developer community](https://slack.sanity.io) or ping us [on twitter](https://twitter.com/sanity_io).
+Jesse Alvarado - contact@jessealvarado.com
+
+My Site: [jessealvarado.com](https://jessealvarado.com)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/alvara/ecotowari.svg?style=for-the-badge
+[contributors-url]: https://github.com/alvara/ecotowari/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/alvara/ecotowari.svg?style=for-the-badge
+[forks-url]: https://github.com/alvara/ecotowari/network/members
+[stars-shield]: https://img.shields.io/github/stars/alvara/ecotowari.svg?style=for-the-badge
+[stars-url]: https://github.com/alvara/ecotowari/stargazers
+[issues-shield]: https://img.shields.io/github/issues/alvara/ecotowari.svg?style=for-the-badge
+[issues-url]: https://github.com/alvara/ecotowari/issues
+[license-shield]: https://img.shields.io/github/license/alvara/ecotowari.svg?style=for-the-badge
+[license-url]: https://github.com/alvara/alvara/ecotowari/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/jesse-alvarado
+[product-screenshot]: images/screenshot.png
+
+
