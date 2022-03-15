@@ -5,7 +5,7 @@ import groq from 'groq'
 import Container from '../common/Container'
 import Supabase from '../utils/supabase'
 import {useRouter} from 'next/router'
-// import Instagram from 'instagram-web-api'
+import Instagram from 'instagram-web-api'
 
 import MainLayout from '../modules/layouts/mainLayout'
 import HeroHeader from '../modules/sections/HeroHeader'
@@ -14,7 +14,7 @@ import Statistics from '../modules/sections/Statistics'
 import EnvironmentImpact from "../modules/sections/EnvironmentImpact"
 import GetStickerCTA from "../modules/sections/GetStickerCTA"
 // import LatestNews from "../modules/sections/LatestNews"
-// import FollowUs from "../modules/sections/FollowUs"
+import FollowUs from "../modules/sections/FollowUs"
 
 // Get the main template for standard pages
 Index.getLayout = function getStaticProps(page: ReactElement) {
@@ -51,16 +51,16 @@ export async function getStaticProps() {
     // `)
 
     // // login to instagram
-    // const username = process.env.INSTAGRAM_USERNAME
-    // const password = process.env.INSTAGRAM_PSW
-    // const igClient = new Instagram({username, password})
-    // await igClient.login()
+    const username = process.env.INSTAGRAM_USERNAME
+    const password = process.env.INSTAGRAM_PSW
+    const igClient = new Instagram({username, password})
+    await igClient.login()
   
     // // get latest instagram Posts
-    // const igPosts = await igClient.getPhotosByUsername({
-    //   username: process.env.INSTAGRAM_USERNAME,
-    //   first: 8,
-    // })
+    const igPosts = await igClient.getPhotosByUsername({
+      username: process.env.INSTAGRAM_USERNAME,
+      first: 8,
+    })
 
     // sticker data from supabase
     const {data: stickers, error} = await Supabase.from('stickers').select('qty, started_at')
@@ -72,7 +72,7 @@ export async function getStaticProps() {
     props: {
       stickers,
       homePage,
-      // igPosts: igPosts.user.edge_owner_to_timeline_media.edges || []
+      igPosts: igPosts.user.edge_owner_to_timeline_media.edges || []
     }
   }
 }
@@ -94,7 +94,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
     environmentsection, 
     statisticsection, 
     ctasection,
-    // followsection
+    followsection
   } = homePage[0]
 
   return (
@@ -113,7 +113,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Statistics stickers={stickers} data={statisticsection}/></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center"><GetStickerCTA data={ctasection}/></Container>
       {/* <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container> */}
-      {/* <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><FollowUs igPosts={igPosts} data={followsection}/></Container> */}
+      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><FollowUs igPosts={igPosts} data={followsection}/></Container>
     </>
   )
 }
