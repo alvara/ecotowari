@@ -19,7 +19,18 @@ export default function AboutEcotowari({data}) {
         </div>
         <div className="col-6">
           {JSON.stringify(data.aboutImage, null, 2)}
-          <Image src='/danger-flyers.jpeg' width="300" height="200" layout="responsive" objectFit='contain' alt="test" className="" quality={30} priority/>
+          <Image 
+            src='/danger-flyers.jpeg' 
+            blurDataURL='/danger-flyers.jpeg' 
+            placeholder='blur'
+            width="300" 
+            height="200" 
+            layout="responsive" 
+            objectFit='contain' 
+            alt="Danger Flyers" 
+            quality={30} 
+            priority
+          />
         </div>
       </div>
   )
