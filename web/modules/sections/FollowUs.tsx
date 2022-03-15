@@ -3,19 +3,28 @@ import PropTypes from 'prop-types'
 import Image from 'next/image'
 import {useRouter} from 'next/router'
 import Link from 'next/link'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faFacebook} from '@fortawesome/free-brands-svg-icons'
+import {faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 FollowUs.propTypes = {
   data: PropTypes.object
 }
 export default function FollowUs({igPosts,data}) {
   const router = useRouter()
-  console.log(igPosts)
   return (
     <div className="row">
       <span className="text-center preTitle">#ecotowari</span>
       <h2 className="text-center">{data.title[router.locale]}</h2>
       <pre className="text-center">{data.content[router.locale]}</pre>
+
+      <div className="text-center">
+        <a target="_window"><FontAwesomeIcon icon={faFacebook} size="lg" className='social-icon'/></a>
+        <FontAwesomeIcon icon={faInstagram} size="lg" className='social-icon'/>
+      </div>
+
         <div className="row row-cols-4">
+          {/* TODO: implement instagram connection workaround */}
           {igPosts && igPosts.map((post) => (
             <div key={post.node.shortcode} className="col">
               <Link href={`https://www.instagram.com/p/${post.node.shortcode}`} passHref={true}>
