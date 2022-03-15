@@ -25,7 +25,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h1 align="center">GymCoach AI</h1>
+  <h1 align="center">Ecotowari</h1>
   
   <img src="preview.png" width="400">
   <br />
@@ -47,24 +47,21 @@ You can learn more details about the purpose and development of this project [he
 
 This project was built with the following technology:
 
-* Server-side rendering with [Next.js](https://nextjs.org/)
+* Server-side rendering and internationalization (i18n) with [Next.js](https://nextjs.org/)
 * Developed in [React.js](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/)
-* Styled with [Bootstrap](https://getbootstrap.com)
-* Content hosted by [SanityIO](https://www.sanity.io/)
+* Responsiveness with [Bootstrap](https://getbootstrap.com)
+* Written content and translations hosted on [SanityIO](https://www.sanity.io/)
 * Data collected and managed with PostgresDB on [Supabase](https://supabase.com/)
 * Hosting & Deployment via [Netlify](https://netlify.com)
 
 ## How to Get Started
-1. Clone this repository
-2. `rails db:migrate`
-3. create user account 
-4. `rails db:seed`
-5. `bundle install`
-6. `yarn install`
-7. Create a `.env` file, 
-8. add an openai key: `OPENAI_ACCESS_TOKEN=access_token_goes_here`
 
-Note that you will need to create your own account to access GPT-3's API. 
+1. Clone this repository
+2. `npm install` in the project root folder on local
+3. `npm run dev` to start the studio and frontend locally
+   - Your studio should be running on [http://localhost:3333](http://localhost:3333)
+   - Your frontend should be running on [http://localhost:3000](http://localhost:3000)
+4. `npm run build` to build to production locally
 
 <!-- LICENSE -->
 ## License
