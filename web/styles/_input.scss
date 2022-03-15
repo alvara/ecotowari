@@ -1,6 +1,26 @@
-input {
+input, textarea {
   padding: $input-padding;
   border-radius: $input-radius;
   border: 1px solid $border-color;
-  margin-right: 8px;
+  width: 100%;
+  display: block;
+  margin-bottom: 24px;
+}
+
+label {
+  margin-bottom: 8px;
+  color: lighten($body-color, 10%)
+}
+
+.mailingList div {
+  display: flex;
+
+  input {
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
+
+  button {
+    flex: 1;align-self: flex-start;  
+  }
 }
