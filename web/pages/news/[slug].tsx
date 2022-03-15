@@ -49,7 +49,6 @@ const Post = (props) => {
         subtitle={post?.summary}
         date={post?.publishedAt}
         tags={post?.tags}
-        orientation="landscape"
       />
     </Container>
 
