@@ -31,7 +31,9 @@
   <br />
 
   <strong align="center">
-    Ecotowari is a green initiative to reduce paper waste. Our goal is to free Japan mailboxes from unsolicited flyers. Think of it as a real-life spam filter!
+    Ecotowari is a green initiative to reduce paper waste. 
+    Our goal is to free Japan mailboxes from unsolicited flyers through the use of a simple branded sticker.
+    Think of it as a real-life spam filter!
 <br/><br/>
    <a href="https://github.com/alvara/ecotowari/issues">Report Bug</a>・
    <a href="https://github.com/alvara/ecotowari/issues">Request Feature</a>
@@ -51,7 +53,7 @@ This project was built with the following technology:
 * Developed in [React.js](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/)
 * Responsiveness with [Bootstrap](https://getbootstrap.com)
 * Written content and translations hosted on [SanityIO](https://www.sanity.io/)
-* Data collected and managed with PostgresDB on [Supabase](https://supabase.com/)
+* Sticker supply management and statistical data collected and managed with PostgresDB on [Supabase](https://supabase.com/)
 * Hosting & Deployment via [Netlify](https://netlify.com)
 
 ## How to Get Started
