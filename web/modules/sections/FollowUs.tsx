@@ -4,8 +4,7 @@ import Image from 'next/image'
 import {useRouter} from 'next/router'
 import Link from 'next/link'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faFacebook} from '@fortawesome/free-brands-svg-icons'
-import {faInstagram} from '@fortawesome/free-brands-svg-icons'
+import {faFacebook, faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 FollowUs.propTypes = {
   data: PropTypes.object
