@@ -42,6 +42,11 @@ export default {
       type: 'object',
       fields: [
         {
+          title: 'Title',
+          name: 'title',
+          type: 'localeText'
+        },
+        {
           title: 'Content',
           name: 'content',
           type: 'localeText'
