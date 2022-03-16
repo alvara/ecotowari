@@ -109,7 +109,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
         />
       </Container>
       <Container wrapperClass="bg-2"><AboutEcotowari data={aboutsection}/></Container>
-      <Container wrapperClass="min-h-100 d-flex align-items-center"><EnvironmentImpact data={environmentsection} /></Container>
+      <Container wrapperClass="d-flex align-items-center pb-0 pb-md-5"><EnvironmentImpact data={environmentsection} /></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Statistics stickers={stickers} data={statisticsection}/></Container>
       <Container wrapperClass="py-5 d-flex align-items-center bg-3"><GetStickerCTA data={ctasection}/></Container>
       {/* <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container> */}
