@@ -24,6 +24,9 @@ nav {
 
   &:focus, &:hover {
     border-color: transparent;
+    background-color: transparent;
+    border: none;
+    color: transparent;
   }
 }
 
