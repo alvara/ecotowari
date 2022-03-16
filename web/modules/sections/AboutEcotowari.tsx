@@ -18,7 +18,7 @@ export default function AboutEcotowari({data}) {
           <pre>{data.content[router.locale]}</pre>
         </div>
         <div className="col-6">
-          <Image src='/danger-flyers.jpeg' width="300" height="200" layout="responsive" objectFit='contain' alt="test" className="" quality={30} priority/>
+          <Image src='/danger-flyers.jpeg' width="300" height="200" layout="responsive" objectFit='contain' alt="test" quality={30} priority/>
         </div>
       </div>
   )
