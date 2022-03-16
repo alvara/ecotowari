@@ -37,7 +37,7 @@ const Contact = ({contactPage}) => {
           textAlign="center"
         />
       </Container>
-      <Container wrapperClass="min-h-100 d-flex align-items-center"><ContactUs data={formsection}/></Container>
+      <Container wrapperClass="my-5"><ContactUs data={formsection}/></Container>
 
     </>
   )
