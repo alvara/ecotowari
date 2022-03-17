@@ -15,7 +15,7 @@ export default {
         {
           title: 'Title',
           name: 'title',
-          type: 'localeString'
+          type: 'localeText'
         },
         {
           title: 'Subtitle',
