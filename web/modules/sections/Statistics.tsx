@@ -27,6 +27,13 @@ export default function Statistics({stickers, data}) {
           </div>
         </div>
         <div className="col-md-4">
+          <div className="card">
+            <FontAwesomeIcon icon={faTree} size="lg" className='circle-icon'/>
+            <h3 className="text-primary">{Math.round(flyersReduced(stickers))} kg</h3>
+            <h6>{data.flyers[router.locale]}</h6>
+          </div>
+        </div>
+        <div className="col-md-4">
           <div className="card text-primary">
           <FontAwesomeIcon icon={faWater} size="lg" className='circle-icon'/>
             <h3 className="text-primary">{Math.round(waterSaved(stickers))} L</h3>
@@ -45,13 +52,6 @@ export default function Statistics({stickers, data}) {
             <FontAwesomeIcon icon={faCloud} size="lg" className='circle-icon'/>
             <h3 className="text-primary">{Math.round(co2Saved(stickers))} kg-CO2e</h3>
             <h6>{data.co2[router.locale]}</h6>
-          </div>
-        </div>
-        <div className="col-md-4">
-          <div className="card">
-            <FontAwesomeIcon icon={faTree} size="lg" className='circle-icon'/>
-            <h3 className="text-primary">{Math.round(flyersReduced(stickers))} kg</h3>
-            <h6>{data.flyers[router.locale]}</h6>
           </div>
         </div>
       </div>
