@@ -55,7 +55,7 @@ export default function HeroHeader({
       <div className="col-md-7">
           <div className='text-center'>
             {img && (
-              <Image src={img}  width="600" height="400" objectFit={'contain'} alt="Background" quality={60} priority={true} />
+              <Image src={img} layout='responsive' width="600" height="450" objectFit={'contain'} alt="Background" quality={60} priority={true} />
             )}
           </div>
       </div>
