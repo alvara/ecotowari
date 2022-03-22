@@ -56,7 +56,7 @@ export default function HeroHeader({
       </div>
       <div className="col-md-6">
         {img && (
-          <Image src={img}  width="550" height="300" objectFit={'scale-down'} alt="Background" quality={10} priority={true} />
+          <Image src={img}  width="550" height="400" objectFit={'contain'} alt="Background" quality={40} priority={true} />
         )}
       </div>
       <div className='bg-overlay'></div>

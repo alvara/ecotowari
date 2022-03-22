@@ -105,7 +105,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
           subtitle={headersection.subtitle[router.locale]}
           buttonPath={headersection.buttonpath}
           buttonText={headersection.buttontext[router.locale]}
-          img={'/mailbox-single.png'}
+          img={'/mailbox-split.png'}
         />
       </Container>
       <Container wrapperClass="bg-2"><AboutEcotowari data={aboutsection}/></Container>
