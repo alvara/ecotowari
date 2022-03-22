@@ -27,37 +27,37 @@ export default function HeroHeader({
   buttonPath = '/', buttonText}) {
   return (
     <div className={`row header justify-content-center align-items-center text-center ${textAlign === 'center' ? 'text-md-center' : 'text-md-start'}`}>
-      <div className={`${textAlign === 'center' ? 'col-md-12' : 'col-md-6'}`}>
+      <div className={`${textAlign === 'center' ? 'col-md-12' : 'col-md-5'}`}>
+          {preTitle && (
+          <span className='preTitle'>{preTitle}</span>
+          )}
+          
+        {title && (
+          <h1>{title}</h1>
+          )}
+          
+        {subtitle && (
+          <pre>{subtitle}</pre>
+          )}
 
-       {preTitle && (
-         <span className='preTitle'>{preTitle}</span>
-         )}
-         
-       {title && (
-         <h1>{title}</h1>
-         )}
-         
-       {subtitle && (
-        <pre>{subtitle}</pre>
-         )}
+        {date && (
+          <p>{new Date(date).toDateString()}</p>
+          )}
 
-       {date && (
-         <p>{new Date(date).toDateString()}</p>
-         )}
+          {tags.length > 0 && tags.map((tag)=>(
+            <span className='pill mini' key={tag}>{tag}</span>
+          ))}
 
-        {tags.length > 0 && tags.map((tag)=>(
-          <span className='pill mini' key={tag}>{tag}</span>
-        ))}
-
-        {buttonPath && buttonText && (
-          <Link href={buttonPath}><button className='btn mb-3'>{buttonText}  <span className='btn-carrot'>›</span></button></Link>
-        )}
-
+          {buttonPath && buttonText && (
+            <Link href={buttonPath}><button className='btn mb-3'>{buttonText}  <span className='btn-carrot'>›</span></button></Link>
+          )}
       </div>
-      <div className="col-md-6">
-        {img && (
-          <Image src={img}  width="550" height="400" objectFit={'contain'} alt="Background" quality={40} priority={true} />
-        )}
+      <div className="col-md-7">
+          <div className='text-center'>
+            {img && (
+              <Image src={img}  width="600" height="400" objectFit={'contain'} alt="Background" quality={60} priority={true} />
+            )}
+          </div>
       </div>
       <div className='bg-overlay'></div>
     </div>
