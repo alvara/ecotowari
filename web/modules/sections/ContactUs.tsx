@@ -25,10 +25,10 @@ export default function ContactUs({data}) {
           {/* You still need to add the hidden input with the form name to your JSX form */}
           <input type="hidden" name="form-name" value="contact"  />
 
-            <label>What is your Email?</label>
+            <label htmlFor='email'>What is your Email?</label>
              <input type="email" name="email" className={'w-100'} placeholder="Email"/>
        
-            <label>Please fill in the details </label>
+            <label htmlFor='content'>Please fill in the details </label>
             <textarea name="content" className={'w-100'} placeholder="Message"/>
 
           <button type="submit" className='btn d-block'>Send  <span className='btn-carrot'>›</span></button>
