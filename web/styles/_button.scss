@@ -1,5 +1,5 @@
 .btn, button {
-  background-color: $secondary;
+  background-color: #086338;
   color: white;
   padding: $input-padding;
   border-radius: $input-radius;
@@ -14,6 +14,6 @@
   }
 
   &:hover {
-    background-color: lighten($primary, 10%);
+    background-color: lighten(#086338, 10%);
   }
 }

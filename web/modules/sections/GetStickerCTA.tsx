@@ -20,7 +20,7 @@ export default function GetStickerCTA({data}) {
       <h2 className="text-center">{data.title[router.locale]}</h2>
         <div className="offset-md-2 col-md-8">
           <Image src='/stickerv1.png' width="400" height="100" layout="responsive" objectFit='contain' alt="test" quality={30} priority/>
-          <pre>{data.content[router.locale]}</pre>
+          <span className='subTitle'>{data.content[router.locale]}</span>
           <div className="text-center mailingList">
             <MailchimpSubscribe url={url}/>
           </div>

@@ -14,7 +14,7 @@ export default function Statistics({stickers, data}) {
   const router = useRouter()
 
   return (
-    <div id="portfolio" className="h-100 text-center justify-content-center">
+    <div id="statistics" className="h-100 text-center justify-content-center">
       <div className="row">
         <div className="offset-md-2 col-md-8">
           <span className='preTitle'>Ecotowari in Numbers</span>

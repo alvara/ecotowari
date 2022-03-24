@@ -9,11 +9,15 @@ nav {
   .navbar-brand, a.nav-link {
     font-size: 1rem;
     font-weight: 500;
-    color: lighten($primary, 20%);
+    color: $primary;
     font-family: 'Work Sans', Sans-Serif;
   }
 }
- 
+
+.navbar-light .navbar-nav .nav-link {
+  color: $headings-color;
+}
+
 // make vh 100 including navbar
 .vh-100-w-nav {
   height: calc(100vh - ($nav-link-height + $nav-link-padding-y * 2))

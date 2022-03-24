@@ -30,7 +30,7 @@ const Contact = ({contactPage}) => {
 
   return (
     <>
-      <Container wrapperClass="header-wrapper" className="d-flex flex-column justify-content-center">
+      <Container wrapperClass="bg-3" className="d-flex flex-column justify-content-center">
         <HeroHeader 
           title={headersection.title[router.locale]}
           subtitle={'Contact the ecotowari team'}

@@ -2,17 +2,19 @@
 $enable-gradients: false;
 $enable-shadows: true;
 
-// Customize Boostrap Body
+// Background colors
 $body-bg: hsl(210, 20%, 100%);
 $body-bg-2: darken($body-bg,3%);
+$bg-3-color: #075a47;
+
 
 // Customize Boostrap Colors
-$primary: #22904b;
+$primary: #075f50;
 $secondary: #333333;
 $gray-900: #333;
 
 // Customize Bootstrap Typography
-$font-primary: #22904b;
+$font-primary: $primary;
 $headings-color: #333;
 $body-color: lighten($headings-color, 10%); // for all text on site
 $font-family-sans-serif: 'Open Sans', Sans-Serif; // base font

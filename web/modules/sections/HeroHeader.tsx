@@ -38,7 +38,7 @@ export default function HeroHeader({
          )}
          
        {subtitle && (
-        <pre>{subtitle}</pre>
+        <span className='subTitle'>{subtitle}</span>
          )}
 
        {date && (
