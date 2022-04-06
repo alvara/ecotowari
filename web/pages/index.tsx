@@ -8,7 +8,7 @@ import {useRouter} from 'next/router'
 // import Instagram from 'instagram-web-api'
 
 import MainLayout from '../modules/layouts/mainLayout'
-import HeroHeader from '../modules/sections/HeroHeader'
+import IndexHeader from '../modules/sections/IndexHeader'
 import AboutEcotowari from '../modules/sections/AboutEcotowari'
 import Statistics from '../modules/sections/Statistics'
 import EnvironmentImpact from '../modules/sections/EnvironmentImpact'
@@ -95,8 +95,8 @@ export default function Index({posts, stickers, igPosts, homePage}) {
 
   return (
     <>
-      <Container wrapperClass="header-wrapper">
-        <HeroHeader
+      <Container wrapperClass="header-wrapper index-wrapper">
+        <IndexHeader
           title={headersection.title[router.locale]}
           subtitle={headersection.subtitle[router.locale]}
           buttonPath={headersection.buttonpath}

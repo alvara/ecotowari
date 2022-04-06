@@ -11,8 +11,60 @@
   z-index: 1;
   width: 100%;
   min-height: 150%;
-  background: #FFFFFF;
+  background: #ffffff;
   transform: rotate(-20deg);
   left: -40%;
   top: -7%;
+}
+
+.header-wrapper {
+  position: relative;
+  z-index: 4;
+  background-image: url('/stars.png');
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.indexHeader {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  text-align: center;
+
+  h1,
+  pre {
+    color: white;
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .indexHeader {
+    // unreverse the order of elements on tablet and larger screen
+    flex-direction: row;
+    text-align: left;
+
+    .btn {
+      margin: inherit;
+    }
+  }
+}
+
+.index-wrapper {
+  // override container padding for normal headers
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
 }
