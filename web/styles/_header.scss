@@ -34,6 +34,7 @@
   flex-direction: column-reverse;
   justify-content: space-between;
   text-align: center;
+  align-items: center;
 
   h1,
   pre {
@@ -48,6 +49,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .indexHeaderImage {
+    max-width: 400px;
   }
 }
 
