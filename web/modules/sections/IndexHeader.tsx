@@ -29,7 +29,7 @@ export default function IndexHeader({
 }) {
   return (
     <div className="indexHeader">
-      <div className="text-content">
+      <div className="text-content mx-auto text-start">
         {preTitle && <span className="preTitle">{preTitle}</span>}
 
         {title && <h1>{title}</h1>}
