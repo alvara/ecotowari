@@ -13,54 +13,64 @@ HeroHeader.propTypes = {
   img: PropTypes.string,
   buttonPath: PropTypes.string,
   buttonText: PropTypes.string,
-  textAlign: PropTypes.string
-};
+  textAlign: PropTypes.string,
+}
 
 export default function HeroHeader({
-  preTitle, 
+  preTitle,
   title,
-  subtitle, 
-  date, 
-  tags = [], 
-  img, 
+  subtitle,
+  date,
+  tags = [],
+  img,
   textAlign = 'start', // align text to center or left. left by default
-  buttonPath = '/', buttonText}) {
+  buttonPath = '/',
+  buttonText,
+}) {
   return (
-    <div className={`row header justify-content-center align-items-center text-center ${textAlign === 'center' ? 'text-md-center' : 'text-md-start'}`}>
-      <div className={`${textAlign === 'center' ? 'col-md-12' : 'col-md-6'}`}>
+    <div
+      className={`row header justify-content-center align-items-center text-center flex-column-reverse flex-md-row flex--column ${
+        textAlign === 'center' ? 'text-md-center' : 'text-md-start'
+      }`}
+    >
+      <div className={`${textAlign === 'center' ? 'col-md-12' : 'col-offset-1 col-md-5'}`}>
+        {preTitle && <span className="preTitle">{preTitle}</span>}
 
-       {preTitle && (
-         <span className='preTitle'>{preTitle}</span>
-         )}
-         
-       {title && (
-         <h1>{title}</h1>
-         )}
-         
-       {subtitle && (
-        <pre>{subtitle}</pre>
-         )}
+        {title && <h1>{title}</h1>}
 
-       {date && (
-         <p>{new Date(date).toDateString()}</p>
-         )}
+        {subtitle && <pre>{subtitle}</pre>}
 
-        {tags.length > 0 && tags.map((tag)=>(
-          <span className='pill mini' key={tag}>{tag}</span>
-        ))}
+        {date && <p>{new Date(date).toDateString()}</p>}
+
+        {tags.length > 0 &&
+          tags.map((tag) => (
+            <span className="pill mini" key={tag}>
+              {tag}
+            </span>
+          ))}
 
         {buttonPath && buttonText && (
-          <Link href={buttonPath}><button className='btn mb-3'>{buttonText}  <span className='btn-carrot'>›</span></button></Link>
+          <Link href={buttonPath}>
+            <button className="btn mb-3">
+              {buttonText} <span className="btn-carrot">›</span>
+            </button>
+          </Link>
         )}
-
       </div>
-      <div className="col-md-6">
+      <div className="col-md-5">
         {img && (
-          <Image src={img}  width="550" height="300" objectFit={'scale-down'} alt="Background" quality={10} priority={true} />
+          <Image
+            src={img}
+            width="550"
+            height="300"
+            objectFit={'scale-down'}
+            alt="Background"
+            quality={10}
+            priority={true}
+          />
         )}
       </div>
-      <div className='bg-overlay'></div>
+      <div className="bg-overlay"></div>
     </div>
   )
 }
-

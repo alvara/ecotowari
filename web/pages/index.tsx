@@ -1,5 +1,5 @@
-import PropTypes from "prop-types"
-import React, {ReactElement} from "react"
+import PropTypes from 'prop-types'
+import React, {ReactElement} from 'react'
 import client from '../client'
 import groq from 'groq'
 import Container from '../common/Container'
@@ -11,69 +11,65 @@ import MainLayout from '../modules/layouts/mainLayout'
 import HeroHeader from '../modules/sections/HeroHeader'
 import AboutEcotowari from '../modules/sections/AboutEcotowari'
 import Statistics from '../modules/sections/Statistics'
-import EnvironmentImpact from "../modules/sections/EnvironmentImpact"
-import GetStickerCTA from "../modules/sections/GetStickerCTA"
+import EnvironmentImpact from '../modules/sections/EnvironmentImpact'
+import GetStickerCTA from '../modules/sections/GetStickerCTA'
 // import LatestNews from "../modules/sections/LatestNews"
-import FollowUs from "../modules/sections/FollowUs"
+import FollowUs from '../modules/sections/FollowUs'
 
 // Get the main template for standard pages
 Index.getLayout = function getStaticProps(page: ReactElement) {
-  return (
-    <MainLayout>
-      {page}
-    </MainLayout>
-  )
+  return <MainLayout>{page}</MainLayout>
 }
 
 export async function getStaticProps() {
   // query for home page content
-   const homePage = await client.fetch(groq`
+  const homePage = await client.fetch(groq`
       *[_type == "home-page"]{'aboutImage': aboutsection.image.asset->url, ...} | order(publishedAt desc)
     `)
 
-    // Query For news posts
-    // const portfolio = await client.fetch(groq`
-    //   *[_type == "portfolio"]{
-    //     _id,
-    //     title,
-    //     summary,
-    //     slug,
-    //     "mainImage": mainImage.asset->url,
-    //     "tags": tag[]->{
-    //       title,
-    //       slug,
-    //       _id,
-    //       showcase,
-    //       "image" : image.asset->url
-    //     },
-    //     "tagList": tag[]->slug
-    //   } | order(publishedAt desc)
-    // `)
+  // Query For news posts
+  // const portfolio = await client.fetch(groq`
+  //   *[_type == "portfolio"]{
+  //     _id,
+  //     title,
+  //     summary,
+  //     slug,
+  //     "mainImage": mainImage.asset->url,
+  //     "tags": tag[]->{
+  //       title,
+  //       slug,
+  //       _id,
+  //       showcase,
+  //       "image" : image.asset->url
+  //     },
+  //     "tagList": tag[]->slug
+  //   } | order(publishedAt desc)
+  // `)
 
-    // // login to instagram
-    // const username = process.env.INSTAGRAM_USERNAME
-    // const password = process.env.INSTAGRAM_PSW
-    // const igClient = new Instagram({username, password})
-    // await igClient.login()
-  
-    // // get latest instagram Posts
-    // const igPosts = await igClient.getPhotosByUsername({
-    //   username: process.env.INSTAGRAM_USERNAME,
-    //   first: 8,
-    // })
+  // // login to instagram
+  // const username = process.env.INSTAGRAM_USERNAME
+  // const password = process.env.INSTAGRAM_PSW
+  // const igClient = new Instagram({username, password})
+  // await igClient.login()
 
-    // sticker data from supabase
-    const {data: stickers, error} = await Supabase.from('stickers').select('qty, started_at')
-    if(error) {
-      throw new Error(error.message)
-    }
-    
+  // // get latest instagram Posts
+  // const igPosts = await igClient.getPhotosByUsername({
+  //   username: process.env.INSTAGRAM_USERNAME,
+  //   first: 8,
+  // })
+
+  // sticker data from supabase
+  const {data: stickers, error} = await Supabase.from('stickers').select('qty, started_at')
+  if (error) {
+    throw new Error(error.message)
+  }
+
   return {
     props: {
       stickers,
       homePage,
       // igPosts: igPosts.user.edge_owner_to_timeline_media.edges || []
-    }
+    },
   }
 }
 
@@ -86,38 +82,47 @@ Index.propTypes = {
 
 export default function Index({posts, stickers, igPosts, homePage}) {
   const router = useRouter()
-  
+
   // deconstruct data for each section in the page
   const {
-    headersection, 
-    aboutsection, 
-    environmentsection, 
-    statisticsection, 
+    headersection,
+    aboutsection,
+    environmentsection,
+    statisticsection,
     ctasection,
-    followsection
+    followsection,
   } = homePage[0]
 
   return (
     <>
-      <Container wrapperClass="d-flex align-items-center header-wrapper" className="h-100 d-flex flex-column justify-content-center my-5">
-        <HeroHeader 
+      <Container wrapperClass="header-wrapper">
+        <HeroHeader
           title={headersection.title[router.locale]}
           subtitle={headersection.subtitle[router.locale]}
           buttonPath={headersection.buttonpath}
           buttonText={headersection.buttontext[router.locale]}
-          img={'/mailbox-single.png'}
+          img={'/mailbox-split.png'}
         />
       </Container>
-      <Container wrapperClass="bg-2"><AboutEcotowari data={aboutsection}/></Container>
-      <Container wrapperClass="d-flex align-items-center pb-0 pb-md-5"><EnvironmentImpact data={environmentsection} /></Container>
-      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Statistics stickers={stickers} data={statisticsection}/></Container>
-      <Container wrapperClass="py-5 d-flex align-items-center bg-3"><GetStickerCTA data={ctasection}/></Container>
+      <Container wrapperClass="bg-2">
+        <AboutEcotowari data={aboutsection} />
+      </Container>
+      <Container wrapperClass="d-flex align-items-center pb-0 pb-md-5">
+        <EnvironmentImpact data={environmentsection} />
+      </Container>
+      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2">
+        <Statistics stickers={stickers} data={statisticsection} />
+      </Container>
+      <Container wrapperClass="py-5 d-flex align-items-center bg-3">
+        <GetStickerCTA data={ctasection} />
+      </Container>
       {/* <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container> */}
       <Container wrapperClass="py-5 d-flex align-items-center bg-2">
-        <FollowUs 
-          // igPosts={igPosts} 
-          data={followsection}/>
-        </Container>
+        <FollowUs
+          // igPosts={igPosts}
+          data={followsection}
+        />
+      </Container>
     </>
   )
 }
