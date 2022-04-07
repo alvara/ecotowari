@@ -3,7 +3,7 @@ h1 {
   font-weight: 600;
   text-transform: capitalize;
   white-space: pre-wrap;
-} 
+}
 
 h2 {
   font-weight: 600;
@@ -18,16 +18,16 @@ h3 {
 
 pre {
   font-family: 'Work Sans', Sans-Serif;
-  white-space: pre-wrap;       /* Since CSS 2.1 */
-  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-  white-space: -pre-wrap;      /* Opera 4-6 */
-  white-space: -o-pre-wrap;    /* Opera 7 */
-  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
   overflow: hidden;
 }
 
 strong {
-  color: lighten($primary,30%);
+  color: lighten($primary, 30%);
   font-weight: inherit;
 }
 
@@ -35,7 +35,7 @@ strong {
 .preTitle {
   font-size: 1.2rem;
   color: $font-primary;
-  margin: 16px 0 8px 0;
+  margin: 0px 0 8px 0;
   font-family: 'Work Sans', Sans-Serif;
   font-weight: 600;
 }
@@ -51,8 +51,8 @@ strong {
 
 //  styles for content generated from portableText
 .portableText {
-  h2{
-   margin-top: 48px;
+  h2 {
+    margin-top: 48px;
   }
 }
 

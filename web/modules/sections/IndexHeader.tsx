@@ -60,7 +60,6 @@ export default function IndexHeader({
             height={400}
             width={550}
             layout="intrinsic"
-            sizes="100px"
             objectFit={'fill'}
             alt="Mailbox"
             quality={10}
