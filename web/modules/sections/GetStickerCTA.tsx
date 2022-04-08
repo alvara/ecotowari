@@ -17,15 +17,16 @@ export default function GetStickerCTA({data}) {
   return (
     <div id="sticker" className="row">
       <span className="text-center preTitle">Get a sticker</span>
-      <h2 className="text-center">{data.title[router.locale]}</h2>
+      <h2 className="text-center pb-0 mb-0">{data.title[router.locale]}</h2>
       <div className="offset-md-2 col-md-8">
         <Image
           src="/stickerv1.png"
-          width="400"
+          width="500"
           height="100"
           layout="responsive"
           objectFit="contain"
-          alt="test"
+          alt="Sticker Preview"
+          className="p-4"
           quality={30}
           priority
         />
