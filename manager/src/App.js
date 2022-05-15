@@ -27,6 +27,11 @@ function App() {
     fetchStickers();
   }, []);
 
+  async function createPost() {
+    await supabase.from("stickers").insert([{}]);
+  }
+
+  // TODO: remove debug code
   console.log(stickers);
 
   return <div className="App">{JSON.stringify(stickers)}</div>;
