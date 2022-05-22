@@ -29,7 +29,7 @@ export default function HeroHeader({
 }) {
   return (
     <div
-      className={`row header justify-content-center align-items-center text-center flex-column-reverse flex-md-row flex--column ${
+      className={`row header justify-content-center align-items-center text-center flex-column-reverse flex--column ${
         textAlign === 'center' ? 'text-md-center' : 'text-md-start'
       }`}
     >

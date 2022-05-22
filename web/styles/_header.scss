@@ -1,5 +1,6 @@
 .header {
   color: white;
+  min-height: 30vh;
 
   h1 {
     color: white;
@@ -35,6 +36,7 @@
   justify-content: space-between;
   text-align: center;
   align-items: center;
+  min-height: 55vh;
 
   h1,
   pre {
@@ -52,7 +54,7 @@
   }
 
   .indexHeaderImage {
-    max-width: 400px;
+    max-width: 40vw;
   }
 }
 

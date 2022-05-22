@@ -17,7 +17,7 @@ export default function EnvironmentImpact({data}) {
         <div className="offset-md-2 col-md-8 text-center">
           <span className="text-center preTitle">Why ecotowari</span>
           <h2>{data.title[router.locale]}</h2>
-          <p className="text-start">{data.content[router.locale]}</p>
+          <pre className="text-start">{data.content[router.locale]}</pre>
         </div>
       </div>
       <div className="row">
