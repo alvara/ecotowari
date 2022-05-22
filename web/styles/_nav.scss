@@ -6,23 +6,25 @@ nav {
   background-color: #fff;
 
   // text in nav
-  .navbar-brand, a.nav-link {
+  .navbar-brand,
+  a.nav-link {
     font-size: 1rem;
     font-weight: 500;
     color: lighten($primary, 20%);
     font-family: 'Work Sans', Sans-Serif;
   }
 }
- 
+
 // make vh 100 including navbar
 .vh-100-w-nav {
-  height: calc(100vh - ($nav-link-height + $nav-link-padding-y * 2))
+  // height: calc(100vh - ($nav-link-height + $nav-link-padding-y * 2))
 }
 
 .navbar-light .navbar-toggler {
   border-color: transparent;
 
-  &:focus, &:hover {
+  &:focus,
+  &:hover {
     border-color: transparent;
     background-color: transparent;
     border: none;
