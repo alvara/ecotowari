@@ -8,7 +8,7 @@ export default function Navbar() {
   const router = useRouter()
 
   return (
-    <nav className="navbar navbar-expand-md navbar-light border-bottom">
+    <nav className="navbar navbar-expand-md navbar-light">
       <div className="container">
         <Link href="/">
           <a className="navbar-brand d-flex justify-content-center">

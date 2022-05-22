@@ -4,6 +4,8 @@ nav {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
+  box-shadow: 0 4px 10px -4px rgb(0 0 0 / 17%);
+  z-index: 6;
 
   // text in nav
   .navbar-brand,
@@ -17,7 +19,7 @@ nav {
 
 // make vh 100 including navbar
 .vh-100-w-nav {
-  // height: calc(100vh - ($nav-link-height + $nav-link-padding-y * 2))
+  height: calc(100vh - ($nav-link-height + $nav-link-padding-y * 2));
 }
 
 .navbar-light .navbar-toggler {
