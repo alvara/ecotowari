@@ -113,11 +113,11 @@ export default function Index({posts, stickers, igPosts, homePage}) {
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2">
         <Statistics stickers={stickers} data={statisticsection} />
       </Container>
-      <Container wrapperClass="header-wrapper d-flex align-items-center bg-3">
+      <Container wrapperClass="min-h-100 header-wrapper d-flex align-items-center bg-3">
         <GetStickerCTA data={ctasection} />
       </Container>
       {/* <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container> */}
-      <Container wrapperClass="d-flex align-items-center bg-2">
+      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2">
         <FollowUs
           // igPosts={igPosts}
           data={followsection}
