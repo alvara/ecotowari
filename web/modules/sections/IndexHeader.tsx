@@ -53,7 +53,7 @@ export default function IndexHeader({
           </Link>
         )}
       </div>
-      <div className="indexHeaderImage my-auto m-4">
+      <div className="my-4 m-5">
         {img && (
           <Image
             src={img}
