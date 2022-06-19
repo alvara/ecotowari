@@ -104,7 +104,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
           img={'/mailbox-split.png'}
         />
       </Container>
-      <Container wrapperClass="bg-2">
+      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2">
         <AboutEcotowari data={aboutsection} />
       </Container>
       <Container wrapperClass="d-flex align-items-center">

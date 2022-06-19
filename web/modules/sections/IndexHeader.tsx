@@ -46,14 +46,14 @@ export default function IndexHeader({
           ))}
 
         {buttonPath && buttonText && (
-          <Link href={buttonPath}>
+          <Link href={buttonPath} passHref>
             <button className="btn mb-3">
               {buttonText} <span className="btn-carrot">›</span>
             </button>
           </Link>
         )}
       </div>
-      <div className="indexHeaderImage mb-5 mx-auto">
+      <div className="indexHeaderImage my-auto m-4">
         {img && (
           <Image
             src={img}

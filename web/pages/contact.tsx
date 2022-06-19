@@ -1,6 +1,6 @@
 import React, {ReactElement} from 'react'
 import groq from 'groq'
-import PropTypes from "prop-types"
+import PropTypes from 'prop-types'
 import {useRouter} from 'next/router'
 
 import client from '../client'
@@ -10,19 +10,16 @@ import HeroHeader from '../modules/sections/HeroHeader'
 import ContactUs from '../modules/sections/ContactUs'
 
 export async function getStaticProps() {
-
   const contactPage = await client.fetch(groq`
       *[_type == "contact-page"] | order(publishedAt desc)
     `)
 
   return {
     props: {
-      contactPage
-    }
+      contactPage,
+    },
   }
 }
-
-
 
 const Contact = ({contactPage}) => {
   const router = useRouter()
@@ -30,30 +27,30 @@ const Contact = ({contactPage}) => {
 
   return (
     <>
-      <Container wrapperClass="header-wrapper" className="d-flex flex-column justify-content-center">
-        <HeroHeader 
+      <Container
+        wrapperClass="header-wrapper"
+        className="d-flex flex-column justify-content-center"
+      >
+        <HeroHeader
           title={headersection.title[router.locale]}
           subtitle={'Contact the ecotowari team'}
           textAlign="center"
         />
       </Container>
-      <Container wrapperClass="my-5"><ContactUs data={formsection}/></Container>
-
+      <Container>
+        <ContactUs data={formsection} />
+      </Container>
     </>
   )
 }
 
 Contact.propTypes = {
   contactPage: PropTypes.arrayOf(PropTypes.object),
-};
+}
 
 // Get the main template for standard pages
 Contact.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <MainLayout>
-      {page}
-    </MainLayout>
-  )
+  return <MainLayout>{page}</MainLayout>
 }
 
-export default Contact;
+export default Contact

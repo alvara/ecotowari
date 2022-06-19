@@ -23,7 +23,7 @@ export default function HeroHeader({
   date,
   tags = [],
   img,
-  textAlign = 'start', // align text to center or left. left by default
+  textAlign = 'center', // align text to center or left. left by default
   buttonPath = '/',
   buttonText,
 }) {
@@ -50,7 +50,7 @@ export default function HeroHeader({
           ))}
 
         {buttonPath && buttonText && (
-          <Link href={buttonPath}>
+          <Link href={buttonPath} passHref>
             <button className="btn mb-3">
               {buttonText} <span className="btn-carrot">›</span>
             </button>
