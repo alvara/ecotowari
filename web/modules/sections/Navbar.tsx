@@ -48,16 +48,16 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item ">
-              <Link href="/about">
+              <Link href="/about-us">
                 <a className="nav-link">{router.locale === 'ja' ? 'About Us' : 'About Us'}</a>
               </Link>
             </li>
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link href="/news">
                 <a className="nav-link">{router.locale === 'ja' ? '最新情報' : 'Latest News'}</a>
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link href="/contact">
                 <a className="nav-link">{router.locale === 'ja' ? '問い合わせ' : 'Contact'}</a>
