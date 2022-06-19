@@ -32,13 +32,13 @@ const Mission = ({posts}) => {
           Our initiative gives people an easy tool to tackle the waste problem, one flyer at a time.
           Ultimately, we hope for local governments and partner organizations to amplify this kind
           of initiative so we can collectively rise up to the challenges embodied in the United
-          Nations' Sustainable Development Goals.
+          Nations&apos; Sustainable Development Goals.
         </p>
         <p>
-          We also often hear that climate action implies sacrifices. It's just not true! Less can be
-          more, especially when it comes to waste. Less waste, more realness!{' '}
+          We also often hear that climate action implies sacrifices. It&apos;s just not true! Less
+          can be more, especially when it comes to waste. Less waste, more realness!{' '}
         </p>
-        <p>Let's all do what we can!</p>
+        <p>Let&apos;s all do what we can!</p>
       </Container>
       <Container
         wrapperClass="min-h-100 d-flex align-items-center bg-2 text-center"
@@ -60,7 +60,7 @@ const Mission = ({posts}) => {
         </p>
         <p>
           That SDG 12.5 target of waste reduction is ecotowari’s raison d’être so it’s only fitting
-          that the mascot is named after it.  {' '}
+          that the mascot is named after it.
         </p>
         <p>
           Inigochi is Inigo’s cute nickname. We only want the best for Inigochi and the best would
