@@ -5,7 +5,6 @@ import {useRouter} from 'next/router'
 import MainLayout from '../modules/layouts/mainLayout'
 import Container from '../common/Container'
 import HeroHeader from '../modules/sections/HeroHeader'
-import Statistics from '../modules/sections/Statistics'
 import FAQ from '../modules/sections/FAQ'
 
 // view all blog posts
@@ -72,12 +71,13 @@ const Mission = ({posts}) => {
         title="What Makes ecotowari Unique?"
       >
         <p>
-          We didn’t invent the “チラシお断り” (chirashi okotowari – no to flyers) stickers. They
-          have indeed been around for a while and one can already see them on mailboxes here and
-          there. However, we were unhappy with their design as no mention is made of the environment
-          or waste reduction. They include very strong language such as "you're being watched" or
-          "we will report you to the police". We feel this type of wording is a barrier to a wider
-          adoption and discourages people from putting them on their mailboxes.{' '}
+          We didn&apos;t invent the “チラシお断り” (chirashi okotowari – no to flyers) stickers.
+          They have indeed been around for a while and one can already see them on mailboxes here
+          and there. However, we were unhappy with their design as no mention is made of the
+          environment or waste reduction. They include very strong language such as
+          &quot;you&apos;re being watched&quot; or &quot;we will report you to the police&quot;. We
+          feel this type of wording is a barrier to a wider adoption and discourages people from
+          putting them on their mailboxes.
         </p>
         <p>
           Our goal with ecotowari is to use a different kind of symbolism and language in order to
@@ -86,7 +86,7 @@ const Mission = ({posts}) => {
         </p>
         <p>
           And the best thing about our stickers is that they’re just as efficient with over 99%
-          reduction rates 😊 
+          reduction rates 😊
         </p>
         <p>Join the movement and brighten up your mailbox with an ecotowari sticker!</p>
       </Container>
