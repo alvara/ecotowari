@@ -95,7 +95,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
 
   return (
     <>
-      <Container wrapperClass="header-wrapper index-wrapper">
+      <Container wrapperClass="min-h-100 header-wrapper index-wrapper d-flex align-items-center">
         <IndexHeader
           title={headersection.title[router.locale]}
           subtitle={headersection.subtitle[router.locale]}

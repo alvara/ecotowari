@@ -12,13 +12,21 @@ $container-padding: 2.875rem;
 
 .bg-3 {
   background: #2a9451; /* fallback colour. Make sure this is just one solid colour. */
-  background: -webkit-linear-gradient(90deg, rgb(21, 111, 92, 0.9), rgb(42, 147, 80, 0.9));
-  // background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); /* The least supported option. */
-  color: white;
-
-  h2 {
-    color: white;
-  }
+  background-image: linear-gradient(
+    to right top,
+    #cfffe5,
+    #c9ffe4,
+    #c2ffe3,
+    #bbffe3,
+    #b4ffe3,
+    #acffe3,
+    #a4fee4,
+    #9bfee5,
+    #8efde7,
+    #81fdea,
+    #71fced,
+    #5ffbf1
+  ); // background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); /* The least supported option. */
 
   .preTitle {
     color: rgb(147 208 147);
@@ -35,6 +43,12 @@ $container-padding: 2.875rem;
   padding: 0;
   position: absolute;
   background: #2a9451; /* fallback colour. Make sure this is just one solid colour. */
-  background: -webkit-linear-gradient(90deg, rgb(21, 111, 92, 0.9), rgb(42, 147, 80, 0.9));
-  // background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); /* The least supported option. */
+  background-image: linear-gradient(
+    to right top,
+    #cfffe5,
+    #c7feed,
+    #c3fcf4,
+    #c1f9fa,
+    #c2f6ff
+  ); // background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); /* The least supported option. */
 }
