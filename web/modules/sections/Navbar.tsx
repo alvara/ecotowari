@@ -13,7 +13,7 @@ export default function Navbar() {
         <Link href="/">
           <a className="navbar-brand d-flex justify-content-center">
             <Image
-              src={'/ecotowari-logo.png'}
+              src={'/ecotowari-logo.svg'}
               width="120"
               height="40"
               objectFit={'contain'}
