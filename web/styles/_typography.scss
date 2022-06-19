@@ -1,3 +1,20 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.preTitle,
+.subTitle {
+  font-family: 'Noto Sans JP', Serif;
+}
+
+body,
+p,
+pre {
+  font-family: 'BIZ UDPGothic', Sans-Serif;
+}
+
 h1 {
   margin-bottom: 32px;
   font-weight: 600;
@@ -6,18 +23,18 @@ h1 {
 }
 
 h2 {
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1.5em;
+  font-size: 2.8em;
 }
 
 h3 {
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 2em;
   text-transform: capitalize;
 }
 
 pre {
-  font-family: 'Noto Sans JP', Sans-Serif;
   white-space: pre-wrap; /* Since CSS 2.1 */
   white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
   white-space: -pre-wrap; /* Opera 4-6 */
@@ -33,19 +50,17 @@ strong {
 
 // optional custom heading that appears above typical heading tags
 .preTitle {
-  font-size: 1.2rem;
+  font-size: 0.9em;
   color: $font-primary;
   margin: 0px 0 8px 0;
-  font-family: 'Noto Sans JP', Sans-Serif;
   font-weight: 600;
 }
 
 // optional custom heading that appears below typical heading tags
 .subTitle {
-  font-size: 1.1rem;
+  font-size: 1.1em;
   color: lighten($headings-color, 35%);
   margin: 16px 0 12px 0;
-  font-family: 'Noto Sans JP', Sans-Serif;
   font-weight: 300;
 }
 
