@@ -43,7 +43,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item ">
-              <Link href="/problem">
+              <Link href="/the-problem">
                 <a className="nav-link">{router.locale === 'ja' ? 'The Problem' : 'The Problem'}</a>
               </Link>
             </li>
