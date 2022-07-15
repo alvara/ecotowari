@@ -17,6 +17,7 @@
   position: relative;
   z-index: 4;
   background-image: url('/stars.png');
+  border-bottom: 1px solid lighten($border-color, 3%);
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;

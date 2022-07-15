@@ -95,7 +95,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
 
   return (
     <>
-      <Container wrapperClass="min-h-100 header-wrapper index-wrapper d-flex align-items-center">
+      <Container wrapperClass="header-wrapper index-wrapper">
         <IndexHeader
           title={headersection.title[router.locale]}
           subtitle={headersection.subtitle[router.locale]}
@@ -104,13 +104,13 @@ export default function Index({posts, stickers, igPosts, homePage}) {
           img={'/mailbox-split.png'}
         />
       </Container>
-      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2">
+      <Container wrapperClass="min-h-100 d-flex align-items-center bg-1">
         <AboutEcotowari data={aboutsection} />
       </Container>
-      <Container wrapperClass="d-flex align-items-center">
+      <Container wrapperClass="d-flex align-items-center bg-2">
         <EnvironmentImpact data={environmentsection} />
       </Container>
-      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2">
+      <Container wrapperClass="min-h-100 d-flex align-items-center ">
         <Statistics stickers={stickers} data={statisticsection} />
       </Container>
       <Container wrapperClass="min-h-100 header-wrapper d-flex align-items-center bg-3">

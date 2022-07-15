@@ -5,6 +5,9 @@ $container-padding: 2.875rem;
   padding-top: $container-padding;
   padding-bottom: $container-padding;
 }
+.bg-1 {
+  background-color: white;
+}
 
 .bg-2 {
   background-color: $body-bg-2;
@@ -44,11 +47,11 @@ $container-padding: 2.875rem;
   position: absolute;
   background: #2a9451; /* fallback colour. Make sure this is just one solid colour. */
   background-image: linear-gradient(
-    to right top,
-    #cfffe5,
-    #c7feed,
-    #c3fcf4,
-    #c1f9fa,
-    #c2f6ff
+    to bottom,
+    #e9f6e5,
+    #eef8eb,
+    #f2fbf1,
+    #f8fdf7,
+    #fdfffd
   ); // background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); /* The least supported option. */
 }
