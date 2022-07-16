@@ -40,6 +40,16 @@ const Mission = ({posts}) => {
         </p>
         <p>Let&apos;s all do what we can!</p>
       </Container>
+      {/* SDG */}
+      <Container
+        // TODO: refactor so bg-overlay is option bg-1, bg-2, and bg-3 within global container component
+        wrapperClass="header-wrapper d-flex align-items-center bg-3 text-center"
+        pretitle="SDGs"
+        title="Our Sustainable Development Goals"
+      >
+        [SDG Information will go here as cards]
+        <div className="bg-overlay"></div>
+      </Container>
       <Container
         wrapperClass="min-h-100 d-flex align-items-center bg-2 text-center"
         pretitle="Say Hello"

@@ -8,7 +8,6 @@ import {useRouter} from 'next/router'
 // import Instagram from 'instagram-web-api'
 import MainLayout from '../modules/layouts/mainLayout'
 import IndexHeader from '../modules/sections/IndexHeader'
-import AboutEcotowari from '../modules/sections/AboutEcotowari'
 import Statistics from '../modules/sections/Statistics'
 import GetStickerCTA from '../modules/sections/GetStickerCTA'
 // import LatestNews from "../modules/sections/LatestNews"
