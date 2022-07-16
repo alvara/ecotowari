@@ -15,21 +15,24 @@ $container-y-padding: 6.25rem;
 
 .bg-3 {
   background: #2a9451; /* fallback colour. Make sure this is just one solid colour. */
-  background-image: linear-gradient(
-    to right top,
-    #cfffe5,
-    #c9ffe4,
-    #c2ffe3,
-    #bbffe3,
-    #b4ffe3,
-    #acffe3,
-    #a4fee4,
-    #9bfee5,
-    #8efde7,
-    #81fdea,
-    #71fced,
-    #5ffbf1
-  ); // background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); /* The least supported option. */
+
+  // background-image: linear-gradient(
+  //   to right top,
+  //   #cfffe5,
+  //   #c9ffe4,
+  //   #c2ffe3,
+  //   #bbffe3,
+  //   #b4ffe3,
+  //   #acffe3,
+  //   #a4fee4,
+  //   #9bfee5,
+  //   #8efde7,
+  //   #81fdea,
+  //   #71fced,
+  //   #5ffbf1
+  // );
+
+  // background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); /* The least supported option. */
 
   .preTitle {
     color: rgb(147 208 147);
@@ -45,13 +48,28 @@ $container-y-padding: 6.25rem;
   margin: 0;
   padding: 0;
   position: absolute;
-  background: #2a9451; /* fallback colour. Make sure this is just one solid colour. */
-  background-image: linear-gradient(
-    to bottom,
-    #e9f6e5,
-    #eef8eb,
-    #f2fbf1,
-    #f8fdf7,
-    #f6fff6
-  ); // background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); /* The least supported option. */
+  // background: #2a9451; /* fallback colour. Make sure this is just one solid colour. */
+  background-image: linear-gradient(to bottom, #defcda, #e2fcdf, #e6fbe5, #eafbea, #effaef);
+  // background-image: linear-gradient(to bottom, #defcda, #e1fcde, #e5fce3, #e8fbe7, #ecfbeb);
+  // background-image: linear-gradient(to bottom, #defcda, #e1fcde, #e4fde1, #e7fde5, #eafde8);
+  // background-image: linear-gradient(to bottom, #dafcde, #defce0, #e1fce3, #e5fde5, #e8fde8);
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   #d1fbd6,
+  //   #d7fcda,
+  //   #ddfcdf,
+  //   #e3fde3,
+  //   #e8fde8
+  // );
+
+  // background-image: linear-gradient(
+  //   to top,
+  //   #caffdc,
+  //   #cdffda,
+  //   #d0fed8,
+  //   #d3fed7,
+  //   #d6fdd5
+  // );
+
+  // background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); /* The least supported option. */
 }
