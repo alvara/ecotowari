@@ -17,9 +17,9 @@ const Mission = ({posts}) => {
         <HeroHeader title={'The Problem'} />
       </Container>
       <Container
-        wrapperClass="min-h-100 d-flex align-items-center  bg-2"
-        pretitle="Our Environment Is In Trouble"
-        title="What's the Problem?"
+        wrapperClass="d-flex align-items-center  bg-2"
+        pretitle="The Environment Is In Trouble"
+        title="The Problem"
       >
         <p>
           Surveys have shown that most flyers are thrown away without being read. Apart from the
@@ -35,7 +35,7 @@ const Mission = ({posts}) => {
         </p>
       </Container>
       <Container
-        wrapperClass="min-h-100 d-flex align-items-center"
+        wrapperClass="d-flex align-items-center"
         pretitle="Environmental Footprint"
         title="The Lifecycle of Flyers"
       >
@@ -56,7 +56,7 @@ const Mission = ({posts}) => {
       </Container>
 
       <Container
-        wrapperClass="min-h-100 d-flex align-items-center bg-2 text-center"
+        wrapperClass="d-flex align-items-center bg-2 text-center"
         pretitle="ecotowari in Numbers"
         title="Our Impact"
       >
@@ -69,7 +69,7 @@ const Mission = ({posts}) => {
         <p>[new statistic cards will go here]</p>
       </Container>
       <Container
-        wrapperClass="min-h-100 d-flex align-items-center bg-3 header-wrapper"
+        wrapperClass="d-flex align-items-center bg-3 header-wrapper"
         pretitle="You Can Help"
         title="Get a Sticker Now"
       >
@@ -86,7 +86,7 @@ const Mission = ({posts}) => {
         <div className="bg-overlay"></div>
       </Container>
       <Container
-        wrapperClass="min-h-100 d-flex align-items-center bg-2 text-center"
+        wrapperClass="d-flex align-items-center bg-2 text-center"
         pretitle="FAQ"
         title="Common Questions"
       >
