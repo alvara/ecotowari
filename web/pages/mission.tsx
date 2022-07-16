@@ -5,7 +5,6 @@ import {useRouter} from 'next/router'
 import MainLayout from '../modules/layouts/mainLayout'
 import Container from '../common/Container'
 import HeroHeader from '../modules/sections/HeroHeader'
-import FAQ from '../modules/sections/FAQ'
 
 // view all blog posts
 const Mission = ({posts}) => {
