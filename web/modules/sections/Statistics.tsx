@@ -23,7 +23,7 @@ export default function Statistics({stickers, data}) {
     <div id="portfolio" className="h-100 text-center justify-content-center">
       <div className="row">
         <div className="offset-md-2 col-md-8">
-          <span className="preTitle">Ecotowari in Numbers</span>
+          <span className="preTitle">How We Help</span>
           <h2>{data.title[router.locale]}</h2>
           <pre>{data.content[router.locale]}</pre>
         </div>

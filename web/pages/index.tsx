@@ -13,6 +13,7 @@ import Statistics from '../modules/sections/Statistics'
 import GetStickerCTA from '../modules/sections/GetStickerCTA'
 // import LatestNews from "../modules/sections/LatestNews"
 import FollowUs from '../modules/sections/FollowUs'
+import SentenceSummary from '../modules/sections/SentenceSummary'
 
 // Get the main template for standard pages
 Index.getLayout = function getStaticProps(page: ReactElement) {
@@ -92,27 +93,27 @@ export default function Index({posts, stickers, igPosts, homePage}) {
           subtitle={headersection.subtitle[router.locale]}
           buttonPath={headersection.buttonpath}
           buttonText={headersection.buttontext[router.locale]}
-          img={'/mailbox-split.png'}
+          img={'/mailbox-split-green.png'}
         />
       </Container>
 
       {/* 1 Sentence Summary */}
-      <Container wrapperClass="min-h-100 d-flex align-items-center bg-1">
-        <AboutEcotowari data={aboutsection} />
+      <Container wrapperClass="d-flex align-items-center bg-1">
+        <SentenceSummary data={aboutsection} />
       </Container>
 
       {/* Ecotowari Positive Impact */}
-      <Container wrapperClass="min-h-100 d-flex align-items-center ">
+      <Container wrapperClass="d-flex align-items-center bg-2 ">
         <Statistics stickers={stickers} data={statisticsection} />
       </Container>
 
       {/* CTA */}
-      <Container wrapperClass="min-h-100 header-wrapper d-flex align-items-center bg-3">
+      <Container wrapperClass="header-wrapper d-flex align-items-center bg-3">
         <GetStickerCTA data={ctasection} />
       </Container>
 
       {/* Socials */}
-      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2">
+      <Container wrapperClass="d-flex align-items-center bg-2">
         <FollowUs data={followsection} />
       </Container>
 

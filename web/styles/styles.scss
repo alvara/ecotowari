@@ -3,8 +3,8 @@ $enable-gradients: false;
 $enable-shadows: true;
 
 // Customize Boostrap Body
-$body-bg: hsl(210, 20%, 100%);
-$body-bg-2: darken($body-bg, 1%);
+$body-bg: hsl(210, 1%, 100%);
+$body-bg-2: darken($body-bg, 3%);
 $grid-gutter-width: 3rem;
 
 // Customize Boostrap Colors
