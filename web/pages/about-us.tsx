@@ -16,11 +16,7 @@ const Mission = ({posts}) => {
       <Container wrapperClass="header-wrapper">
         <HeroHeader title={'About Us'} />
       </Container>
-      <Container
-        wrapperClass="min-h-100 d-flex align-items-center"
-        pretitle="About Us"
-        title="Our Values"
-      >
+      <Container wrapperClass="d-flex align-items-center" pretitle="About Us" title="Our Values">
         <p>[Information about our Values, Credo, and culture at ecotowari]</p>
         <p>
           Climate action is often seen as too big a task, something only governments or large
@@ -51,14 +47,14 @@ const Mission = ({posts}) => {
         <div className="bg-overlay"></div>
       </Container>
       <Container
-        wrapperClass="min-h-100 d-flex align-items-center bg-2 text-center"
+        wrapperClass="d-flex align-items-center bg-2 text-center"
         pretitle="Say Hello"
         title="Meet the Team"
       >
         <p>[Avatar circle with profiles of each person with summary of each team member]</p>
       </Container>
       <Container
-        wrapperClass="min-h-100 d-flex align-items-center"
+        wrapperClass="d-flex align-items-center"
         pretitle="Our Mascot"
         title="Meet Inigochi"
       >
@@ -80,7 +76,7 @@ const Mission = ({posts}) => {
       </Container>
 
       <Container
-        wrapperClass="min-h-100 d-flex align-items-center bg-2 text-center"
+        wrapperClass="d-flex align-items-center bg-2 text-center"
         pretitle="Special Thanks"
         title="To Our Dear Supporters"
       >
@@ -111,7 +107,7 @@ const Mission = ({posts}) => {
       </Container>
 
       <Container
-        wrapperClass="min-h-100 d-flex align-items-center text-center"
+        wrapperClass="d-flex align-items-center text-center"
         pretitle="FAQ"
         title="Common Questions"
       >
