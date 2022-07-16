@@ -6,7 +6,6 @@ import Container from '../common/Container'
 import Supabase from '../utils/supabase'
 import {useRouter} from 'next/router'
 // import Instagram from 'instagram-web-api'
-
 import MainLayout from '../modules/layouts/mainLayout'
 import IndexHeader from '../modules/sections/IndexHeader'
 import AboutEcotowari from '../modules/sections/AboutEcotowari'
@@ -84,14 +83,7 @@ export default function Index({posts, stickers, igPosts, homePage}) {
   const router = useRouter()
 
   // deconstruct data for each section in the page
-  const {
-    headersection,
-    aboutsection,
-    environmentsection,
-    statisticsection,
-    ctasection,
-    followsection,
-  } = homePage[0]
+  const {headersection, aboutsection, statisticsection, ctasection, followsection} = homePage[0]
 
   return (
     <>
@@ -104,25 +96,28 @@ export default function Index({posts, stickers, igPosts, homePage}) {
           img={'/mailbox-split.png'}
         />
       </Container>
+
+      {/* 1 Sentence Summary */}
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-1">
         <AboutEcotowari data={aboutsection} />
       </Container>
-      <Container wrapperClass="d-flex align-items-center bg-2">
-        <EnvironmentImpact data={environmentsection} />
-      </Container>
+
+      {/* Ecotowari Positive Impact */}
       <Container wrapperClass="min-h-100 d-flex align-items-center ">
         <Statistics stickers={stickers} data={statisticsection} />
       </Container>
+
+      {/* CTA */}
       <Container wrapperClass="min-h-100 header-wrapper d-flex align-items-center bg-3">
         <GetStickerCTA data={ctasection} />
       </Container>
-      {/* <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container> */}
+
+      {/* Socials */}
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2">
-        <FollowUs
-          // igPosts={igPosts}
-          data={followsection}
-        />
+        <FollowUs data={followsection} />
       </Container>
+
+      {/* <Container wrapperClass="d-flex align-items-center bg-2"><LatestNews posts={posts} /></Container> */}
     </>
   )
 }

@@ -17,7 +17,7 @@ export default function Container({
   pretitle = '',
 }: ContainerProps) {
   return (
-    <div className={`container-wrapper py-5 ${wrapperClass}`}>
+    <div className={`container-wrapper ${wrapperClass}`}>
       <div className={`container ${className}`}>
         <div className="text-center ">
           {pretitle && <span className=" preTitle">{pretitle}</span>}

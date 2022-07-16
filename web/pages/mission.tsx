@@ -16,8 +16,10 @@ const Mission = ({posts}) => {
       <Container wrapperClass="header-wrapper">
         <HeroHeader title={'Our Mission'} subtitle={'Feed of news articles will go here'} />
       </Container>
+
+      {/* About Ecotowari */}
       <Container
-        wrapperClass="min-h-100 d-flex align-items-center"
+        wrapperClass="d-flex align-items-center"
         pretitle="About ecotowari"
         title="Our Mission"
       >
@@ -40,6 +42,8 @@ const Mission = ({posts}) => {
           next time you will open your mailbox, it will be to see the mail that matters!
         </p>
       </Container>
+
+      {/* Our Story */}
       <Container
         wrapperClass="min-h-100 d-flex align-items-center bg-2"
         pretitle="Our Story"
@@ -65,6 +69,8 @@ const Mission = ({posts}) => {
           reasons.
         </p>
       </Container>
+
+      {/* How We Are Different */}
       <Container
         wrapperClass="min-h-100 d-flex align-items-center"
         pretitle="How We Are Different"
@@ -91,16 +97,18 @@ const Mission = ({posts}) => {
         <p>Join the movement and brighten up your mailbox with an ecotowari sticker!</p>
       </Container>
 
+      {/* SDG */}
       <Container
         // TODO: refactor so bg-overlay is option bg-1, bg-2, and bg-3 within global container component
         wrapperClass="header-wrapper min-h-100 d-flex align-items-center bg-3 text-center"
-        pretitle="About SDGs"
+        pretitle="SDGs"
         title="Our Sustainable Development Goals"
       >
         [SDG Information will go here as cards]
         <div className="bg-overlay"></div>
       </Container>
 
+      {/* Positive Impact */}
       <Container
         wrapperClass="min-h-100 d-flex align-items-center bg-2 text-center"
         pretitle="ecotowari in Numbers"
@@ -114,6 +122,8 @@ const Mission = ({posts}) => {
         </p>
         <p>[new statistic cards will go here]</p>
       </Container>
+
+      {/* CTA */}
       <Container
         wrapperClass="min-h-100 d-flex align-items-center bg-3 header-wrapper"
         pretitle="You Can Help"
@@ -131,13 +141,15 @@ const Mission = ({posts}) => {
         </p>
         <div className="bg-overlay"></div>
       </Container>
-      <Container
+
+      {/* FAQ */}
+      {/* <Container
         wrapperClass="min-h-100 d-flex align-items-center bg-2 text-center"
         pretitle="FAQ"
         title="Common Questions"
       >
         <FAQ />
-      </Container>
+      </Container> */}
     </>
   )
 }
