@@ -29,12 +29,12 @@ export async function getStaticProps() {
   }
 }
 
-const Mission = ({stickers, homePage}) => {
-  Mission.propTypes = {
-    stickers: PropTypes.arrayOf(PropTypes.object),
-    homePage: PropTypes.arrayOf(PropTypes.object),
-  }
+Mission.propTypes = {
+  stickers: PropTypes.arrayOf(PropTypes.object),
+  homePage: PropTypes.arrayOf(PropTypes.object),
+}
 
+function Mission({stickers, homePage}) {
   const {ctasection, followsection} = homePage[0]
   const router = useRouter()
   console.log(router)
