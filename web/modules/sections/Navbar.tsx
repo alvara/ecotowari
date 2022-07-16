@@ -24,7 +24,7 @@ export default function Navbar() {
           </a>
         </Link>
         <button
-          className="navbar-toggler ms-auto"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#collapseNavbar"
@@ -35,22 +35,21 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="collapseNavbar">
-          <ul className="navbar-nav ms-auto"></ul>
           <ul className="navbar-nav ms-auto">
-            <li className="nav-item active">
-              <Link href="/mission">
-                <a className="nav-link">{router.locale === 'ja' ? 'Our Mission' : 'Our Mission'}</a>
-              </Link>
+            <li className="nav-item ">
+              <a className="nav-link" href="/mission">
+                {router.locale === 'ja' ? 'Our Mission' : 'Our Mission'}
+              </a>
             </li>
             <li className="nav-item ">
-              <Link href="/the-problem">
-                <a className="nav-link">{router.locale === 'ja' ? 'The Problem' : 'The Problem'}</a>
-              </Link>
+              <a className="nav-link" href="/the-problem">
+                {router.locale === 'ja' ? 'The Problem' : 'The Problem'}
+              </a>
             </li>
             <li className="nav-item ">
-              <Link href="/about-us">
-                <a className="nav-link">{router.locale === 'ja' ? 'About Us' : 'About Us'}</a>
-              </Link>
+              <a className="nav-link" href="/about-us">
+                {router.locale === 'ja' ? 'About Us' : 'About Us'}
+              </a>
             </li>
 
             {/* <li className="nav-item">
@@ -59,21 +58,20 @@ export default function Navbar() {
               </Link>
             </li> */}
             <li className="nav-item">
-              <Link href="/contact">
-                <a className="nav-link">{router.locale === 'ja' ? '問い合わせ' : 'Contact'}</a>
-              </Link>
+              <a className="nav-link" href="/contact">
+                {router.locale === 'ja' ? '問い合わせ' : 'Contact'}
+              </a>
             </li>
             <li className="nav-item">
-              <Link href="/#sticker">
-                <a className="nav-link">
-                  {router.locale === 'ja' ? 'ステッカーの入手' : 'Get Sticker'}
-                </a>
-              </Link>
+              <a className="nav-link" href="/#sticker">
+                {router.locale === 'ja' ? 'ステッカーの入手' : 'Get Sticker'}
+              </a>
             </li>
             <li className="nav-item">
-              <Link href={router.asPath} locale="ja">
+              <Link href={router.asPath} locale="jp">
                 <a
                   className="nav-link"
+                  href={router.asPath}
                   onClick={() => {
                     cookieCutter.set('NEXT_LOCALE', 'ja', new Date(999999999999))
                   }}
