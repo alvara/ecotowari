@@ -2,14 +2,14 @@ import React, {ReactElement} from 'react'
 import PropTypes from 'prop-types'
 import {useRouter} from 'next/router'
 
-import MainLayout from '../modules/layouts/mainLayout'
-import Container from '../common/Container'
-import HeroHeader from '../modules/sections/HeroHeader'
-import GetStickerCTA from '../modules/sections/GetStickerCTA'
+import MainLayout from '../features/layout/mainLayout'
+import Container from '../components/Container'
+import HeroHeader from '../components/header/HeroHeader'
+import GetStickerCTA from '../features/sections/GetStickerCTA'
 import Supabase from '../utils/supabase'
 import client from '../client'
 import groq from 'groq'
-import FollowUs from '../modules/sections/FollowUs'
+import FollowUs from '../features/sections/FollowUs'
 
 export async function getStaticProps() {
   // get i18n text from sanity

@@ -2,10 +2,10 @@ import React, {ReactElement} from 'react'
 import PropTypes from 'prop-types'
 import {useRouter} from 'next/router'
 
-import MainLayout from '../modules/layouts/mainLayout'
-import Container from '../common/Container'
-import HeroHeader from '../modules/sections/HeroHeader'
-import FAQ from '../modules/sections/FAQ'
+import MainLayout from '../features/layout/mainLayout'
+import Container from '../components/Container'
+import HeroHeader from '../components/header/HeroHeader'
+import FAQ from '../features/sections/FAQ'
 
 // view all blog posts
 const Mission = ({posts}) => {

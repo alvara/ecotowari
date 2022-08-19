@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 import {useRouter} from 'next/router'
 
 import client from '../client'
-import MainLayout from '../modules/layouts/mainLayout'
-import Container from '../common/Container'
-import HeroHeader from '../modules/sections/HeroHeader'
-import ContactUs from '../modules/sections/ContactUs'
+import MainLayout from '../features/layout/mainLayout'
+import Container from '../components/Container'
+import HeroHeader from '../components/header/HeroHeader'
+import ContactUs from '../features/sections/ContactUs'
 
 export async function getStaticProps() {
   const contactPage = await client.fetch(groq`

@@ -1,13 +1,12 @@
 import React, {ReactElement} from 'react'
 import groq from 'groq'
-import PropTypes from "prop-types"
+import PropTypes from 'prop-types'
 
 import client from '../client'
-import MainLayout from '../modules/layouts/mainLayout'
-import Container from '../common/Container'
-import HeroHeader from '../modules/sections/HeroHeader'
-import InfoCard from '../modules/widgets/InfoCard'
-
+import MainLayout from '../features/layout/mainLayout'
+import Container from '../components/Container'
+import HeroHeader from '../components/header/HeroHeader'
+import InfoCard from '../components/card/InfoCard'
 
 // view all News posts
 const News = ({posts}) => {
@@ -15,53 +14,40 @@ const News = ({posts}) => {
     <div>
       <Container wrapperClass="vh-100-w-nav" className="h-100 text-center">
         <div>
-      <HeroHeader 
-        title={'News'}
-        subtitle={'A collection of my written articles'}
-      />
-   <Container className='text-center'>
-      <div className='row row-cols-md-2 row-cols-lg-3'>
-      {posts.length > 0 && posts.map(
-        ({_id, title = '', slug, publishedAt = '', mainImage, categories}) =>
-            (
-            <div  key={`${_id}`} >
-              <InfoCard 
-                className='postCard'
-                mainImage={mainImage}
-                href={"/News/[slug]"}
-                as={`/News/${slug.current}`} 
-                title={title} 
-                tags={categories}
-                subtitle={new Date(publishedAt).toDateString()}
-                height={140}
-              />
+          <HeroHeader title={'News'} subtitle={'A collection of my written articles'} />
+          <Container className="text-center">
+            <div className="row row-cols-md-2 row-cols-lg-3">
+              {posts.length > 0 &&
+                posts.map(({_id, title = '', slug, publishedAt = '', mainImage, categories}) => (
+                  <div key={`${_id}`}>
+                    <InfoCard
+                      className="postCard"
+                      mainImage={mainImage}
+                      href={'/News/[slug]'}
+                      as={`/News/${slug.current}`}
+                      title={title}
+                      tags={categories}
+                      subtitle={new Date(publishedAt).toDateString()}
+                      height={140}
+                    />
+                  </div>
+                ))}
             </div>
-          )
-        )}
-      </div>
-    </Container>
-    </div>
-
-    </Container>  
+          </Container>
+        </div>
+      </Container>
     </div>
   )
 }
 
 // Get the main template for standard pages
 News.getLayout = function getLayout(page: ReactElement) {
-  return (
-    <MainLayout>
-      {page}
-    </MainLayout>
-  )
+  return <MainLayout>{page}</MainLayout>
 }
 
 News.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.object),
-};
-
-
-
+}
 
 export async function getStaticProps() {
   const posts = await client.fetch(groq`
@@ -86,9 +72,9 @@ export async function getStaticProps() {
 `)
   return {
     props: {
-      posts
-    }
+      posts,
+    },
   }
 }
 
-export default News;
+export default News

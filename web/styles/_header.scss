@@ -24,6 +24,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  & h1 {
+    color: white;
+  }
+  color: white;
 }
 
 .indexHeader {
@@ -33,6 +38,7 @@
   text-align: center;
   align-items: center;
   min-height: 55vh;
+  color: #ffffff;
 
   .btn {
     margin: 0 auto;
