@@ -3,15 +3,14 @@
  */
 
 module.exports = {
-  i18n : {
+  i18n: {
     // locales supported by this applications
-    locales: ['ja','en'],
+    locales: ['ja', 'en'],
     // default locale used when non-locale path visited
-    defaultLocale: "ja"
+    defaultLocale: 'ja',
   },
   images: {
-    domains: ['via.placeholder.com','cdn.sanity.io','scontent-nrt1-1.cdninstagram.com']
+    domains: ['via.placeholder.com', 'cdn.sanity.io', 'scontent-nrt1-1.cdninstagram.com'],
   },
   trailingSlash: true,
-
 }
