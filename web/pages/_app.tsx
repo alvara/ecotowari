@@ -1,6 +1,4 @@
-// pages/_app.tsx
-
-import React, { ReactElement, ReactNode, useEffect } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import '../styles/styles.scss';
@@ -18,11 +16,6 @@ type AppPropsWithLayout = AppProps & {
 };
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  // useEffect(() => {
-  //   // import bootstrap js for menu collapse
-  //   import('bootstrap/dist/js/bootstrap');
-  // }, []);
-
   return (
     <>
       <Head>
