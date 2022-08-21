@@ -15,14 +15,6 @@
   },
   "devDependencies": {
     "@sanity/cli": "^2.26.0",
-    "@typescript-eslint/eslint-plugin": "^5.33.1",
-    "lerna": "^5.4.3",
-    "prettier": "^2.7.1"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint",
-    "*.{ts,tsx}": "bash -c 'npm run lint:types'",
-    "*.{js,jsx,ts,tsx,css}": "prettier --check",
-    "*.{css,scss,sass}": "stylelint"
+    "lerna": "^4.0.0"
   }
 }
