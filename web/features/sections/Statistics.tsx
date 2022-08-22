@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRouter } from 'next/router';
 import {
   totalStickers,
@@ -42,35 +41,35 @@ export default function Statistics({ stickers }: IStatistics) {
     ref: 'totalStickers',
     end: Math.round(totalStickers(data)),
     enableScrollSpy: true,
-    scrollSpyDelay: 150,
+    scrollSpyDelay: 75,
   });
 
   useCountUp({
     ref: 'flyersReduced',
     end: Math.round(flyersReduced(data)),
     enableScrollSpy: true,
-    scrollSpyDelay: 150,
+    scrollSpyDelay: 75,
   });
 
   useCountUp({
     ref: 'waterSaved',
     end: Math.round(waterSaved(data)),
     enableScrollSpy: true,
-    scrollSpyDelay: 150,
+    scrollSpyDelay: 75,
   });
 
   useCountUp({
     ref: 'electricitySaved',
     end: Math.round(electricitySaved(data)),
     enableScrollSpy: true,
-    scrollSpyDelay: 150,
+    scrollSpyDelay: 75,
   });
 
   useCountUp({
     ref: 'c02Saved',
     end: Math.round(co2Saved(data)),
     enableScrollSpy: true,
-    scrollSpyDelay: 150,
+    scrollSpyDelay: 75,
   });
 
   return (
@@ -118,6 +117,8 @@ export default function Statistics({ stickers }: IStatistics) {
               icon={faHouseUser}
               size="lg"
               className="circle-icon"
+              width={'5rem'}
+              height={'5rem'}
             />
             <h3 className="text-primary">
               <span id="totalStickers" />
@@ -132,7 +133,13 @@ export default function Statistics({ stickers }: IStatistics) {
         </div>
         <div className="col-md-4">
           <div className="card">
-            <FontAwesomeIcon icon={faTree} size="lg" className="circle-icon" />
+            <FontAwesomeIcon
+              icon={faTree}
+              size="lg"
+              className="circle-icon"
+              width={'5rem'}
+              height={'5rem'}
+            />
             <h3 className="text-primary">
               <span id="flyersReduced" /> kg
             </h3>
@@ -145,7 +152,13 @@ export default function Statistics({ stickers }: IStatistics) {
         </div>
         <div className="col-md-4">
           <div className="card text-primary">
-            <FontAwesomeIcon icon={faWater} size="lg" className="circle-icon" />
+            <FontAwesomeIcon
+              icon={faWater}
+              size="lg"
+              className="circle-icon"
+              width={'5rem'}
+              height={'5rem'}
+            />
             <h3 className="text-primary">
               <span id="waterSaved" />L
             </h3>
@@ -160,6 +173,8 @@ export default function Statistics({ stickers }: IStatistics) {
               icon={faLightbulb}
               size="lg"
               className="circle-icon"
+              width={'5rem'}
+              height={'5rem'}
             />
             <h3 className="text-primary">
               <span id="electricitySaved" /> kWh
@@ -171,7 +186,13 @@ export default function Statistics({ stickers }: IStatistics) {
         </div>
         <div className="col-md-4">
           <div className="card">
-            <FontAwesomeIcon icon={faCloud} size="lg" className="circle-icon" />
+            <FontAwesomeIcon
+              icon={faCloud}
+              size="lg"
+              className="circle-icon"
+              width={'5rem'}
+              height={'5rem'}
+            />
             <h3 className="text-primary">
               <span id="c02Saved" /> kg-CO2e
             </h3>
