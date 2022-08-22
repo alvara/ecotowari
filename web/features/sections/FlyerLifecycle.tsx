@@ -1,5 +1,4 @@
-import React from 'react'
-import InfoCard from '../../components/card/InfoCard'
+import InfoCard from '../../components/card/InfoCard';
 
 export default function FlyerLifecycle() {
   return (
@@ -19,5 +18,5 @@ export default function FlyerLifecycle() {
         <InfoCard title="Text Block 4 goes here" content="content is here" />
       </div>
     </div>
-  )
+  );
 }

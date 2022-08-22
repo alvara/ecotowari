@@ -1,7 +1,5 @@
-import React from 'react'
-
 // pages/_document.js
-import {Html, Head, Main, NextScript} from 'next/document'
+import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
@@ -10,12 +8,9 @@ export default function Document() {
         {/* Google Font */}
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
           rel="stylesheet"
         ></link>
       </Head>
@@ -24,5 +19,5 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }

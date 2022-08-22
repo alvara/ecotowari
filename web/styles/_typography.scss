@@ -6,32 +6,48 @@ h5,
 h6,
 .preTitle,
 .subTitle {
-  font-family: 'Noto Sans JP', Serif;
+  font-family: 'Nunito', Serif;
 }
 
 body,
 p,
 pre {
-  font-family: 'BIZ UDPGothic', Sans-Serif;
+  font-family: 'Nunito', Sans-Serif;
 }
 
 h1 {
   margin-bottom: 32px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: capitalize;
   white-space: pre-wrap;
+  font-size: 2em;
 }
 
 h2 {
   font-weight: 700;
   margin-bottom: 1.2em;
   font-size: 2em;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 1em;
+    bottom: -0.4em;
+    left: 40%;
+    border-bottom: 5px solid $secondary;
+  }
 }
 
 h3 {
   font-weight: 600;
   font-size: 2em;
   text-transform: capitalize;
+}
+
+h6 {
+  font-weight: 700;
 }
 
 pre {

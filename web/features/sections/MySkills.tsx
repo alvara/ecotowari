@@ -1,9 +1,8 @@
-import Image from 'next/image'
-import React from 'react'
-import PropTypes from 'prop-types'
-import Link from 'next/link'
+import Image from 'next/image';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
 
-export default function MySkills({tags}) {
+export default function MySkills({ tags }) {
   // filter out only
   return (
     <div id="about">
@@ -36,17 +35,18 @@ export default function MySkills({tags}) {
         <div className="col-sm-12 col-md-12 col-lg-6">
           {/* Bio and History */}
           <p>
-            I&apos;m a self-driven, team-oriented full stack developer with a background in web
-            development.
+            I&apos;m a self-driven, team-oriented full stack developer with a
+            background in web development.
           </p>
           <p>
-            I aim to solve problems and drive results for clients by developing web applications
-            that are fast in performance, flexible in design, and typed in clean code for easy
-            collaboration and maintenance.
+            I aim to solve problems and drive results for clients by developing
+            web applications that are fast in performance, flexible in design,
+            and typed in clean code for easy collaboration and maintenance.
           </p>
           <p>
-            I am currently focused on learning and applying Go(Golang) and Google Cloud Platform
-            (GCP) services to projects that are built on NextJS.
+            I am currently focused on learning and applying Go(Golang) and
+            Google Cloud Platform (GCP) services to projects that are built on
+            NextJS.
           </p>
           <div className="row">
             <div className="col-12">
@@ -102,9 +102,9 @@ export default function MySkills({tags}) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 MySkills.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.object),
-}
+};

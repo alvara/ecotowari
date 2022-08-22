@@ -1,7 +1,6 @@
-import Image from 'next/image'
-import React from 'react'
-import PropTypes from 'prop-types'
-import Link from 'next/link'
+import Image from 'next/image';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 // Define Proptypes for PortfolioItem Component
 HeroHeader.propTypes = {
@@ -14,7 +13,7 @@ HeroHeader.propTypes = {
   buttonPath: PropTypes.string,
   buttonText: PropTypes.string,
   textAlign: PropTypes.string,
-}
+};
 
 export default function HeroHeader({
   preTitle,
@@ -33,10 +32,14 @@ export default function HeroHeader({
         textAlign === 'center' ? 'text-md-center' : 'text-md-start'
       }`}
     >
-      <div className={`${textAlign === 'center' ? 'col-md-12' : 'col-offset-1 col-md-5'}`}>
+      <div
+        className={`${
+          textAlign === 'center' ? 'col-md-12' : 'col-offset-1 col-md-5'
+        }`}
+      >
         {preTitle && <span className="preTitle">{preTitle}</span>}
 
-        {title && <h1>{title}</h1>}
+        {title && <h1 style={{ marginBottom: 0 }}>{title}</h1>}
 
         {subtitle && <pre>{subtitle}</pre>}
 
@@ -72,5 +75,5 @@ export default function HeroHeader({
       </div>
       <div className="bg-overlay"></div>
     </div>
-  )
+  );
 }

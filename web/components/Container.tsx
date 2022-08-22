@@ -1,11 +1,9 @@
-import React from 'react'
-
 interface ContainerProps {
-  children?: React.ReactNode
-  wrapperClass?: string
-  className?: string
-  title?: string
-  pretitle?: string
+  children?: React.ReactNode;
+  wrapperClass?: string;
+  className?: string;
+  title?: string;
+  pretitle?: string;
 }
 
 // wrap section with bootstrap container
@@ -26,5 +24,5 @@ export default function Container({
         {children}
       </div>
     </div>
-  )
+  );
 }

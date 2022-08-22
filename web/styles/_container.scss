@@ -53,6 +53,10 @@ $container-y-padding: 6.25rem;
   padding: 0;
   position: absolute;
   background: #2a9451; /* fallback colour. Make sure this is just one solid colour. */
-  background: -webkit-linear-gradient(90deg, rgb(21, 111, 92, 0.9), rgb(42, 147, 80, 0.9));
+  background: -webkit-linear-gradient(
+    90deg,
+    rgb(21, 111, 92, 0.9),
+    rgb(42, 147, 80, 0.9)
+  );
   // background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)); /* The least supported option. */
 }

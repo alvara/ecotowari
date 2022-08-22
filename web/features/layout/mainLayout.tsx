@@ -1,13 +1,12 @@
 // main layout for all pages
-import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-import Navbar from './Navbar'
-import Footer from './Footer'
-import Head from 'next/head'
-import Container from '../../components/Container'
+import Navbar from './Navbar';
+import Footer from './Footer';
+import Head from 'next/head';
+import Container from '../../components/Container';
 
-export default function MainLayout({children}) {
+export default function MainLayout({ children }) {
   return (
     <>
       <Head>
@@ -19,9 +18,9 @@ export default function MainLayout({children}) {
         <Footer />
       </Container>
     </>
-  )
+  );
 }
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
