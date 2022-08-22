@@ -1,4 +1,3 @@
-import React from 'react';
 import groq from 'groq';
 import PropTypes from 'prop-types';
 

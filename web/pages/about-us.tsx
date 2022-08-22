@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRouter } from 'next/router';
 import Container from '../components/Container';
 import HeroHeader from '../components/header/HeroHeader';

@@ -1,5 +1,4 @@
 // display individual blog post
-import React from 'react';
 import groq from 'groq';
 import { PortableText } from '@portabletext/react';
 import PropTypes from 'prop-types';

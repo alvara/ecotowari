@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import React from 'react';
 import client from '../client';
 import groq from 'groq';
 import Container from '../components/Container';
