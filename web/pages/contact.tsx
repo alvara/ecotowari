@@ -7,6 +7,8 @@ import Container from '../components/Container';
 import HeroHeader from '../components/header/HeroHeader';
 import ContactUs from '../features/sections/ContactUs';
 
+
+
 export async function getStaticProps() {
   const contactPage = await client.fetch(groq`
       *[_type == "contact-page"] | order(publishedAt desc)
@@ -42,8 +44,12 @@ const Contact = ({ contactPage }) => {
   );
 };
 
+
 Contact.propTypes = {
   contactPage: PropTypes.arrayOf(PropTypes.object),
 };
+
+
+
 
 export default Contact;

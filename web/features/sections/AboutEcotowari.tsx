@@ -1,14 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {useRouter} from 'next/router'
-import Image from 'next/image'
+import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 AboutEcotowari.propTypes = {
   data: PropTypes.object,
-}
+};
 
-export default function AboutEcotowari({data}) {
-  const router = useRouter()
+export default function AboutEcotowari({ data }) {
+  const router = useRouter();
 
   return (
     <div className="row">
@@ -31,5 +30,5 @@ export default function AboutEcotowari({data}) {
         />
       </div>
     </div>
-  )
+  );
 }

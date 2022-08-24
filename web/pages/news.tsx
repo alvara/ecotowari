@@ -82,4 +82,4 @@ export async function getStaticProps() {
   };
 }
 
-export default News;
+export default News

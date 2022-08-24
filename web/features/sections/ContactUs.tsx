@@ -1,13 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {useRouter} from 'next/router'
+import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
 
 ContactUs.propTypes = {
   data: PropTypes.object,
-}
+};
 
-export default function ContactUs({data}) {
-  const router = useRouter()
+export default function ContactUs({ data }) {
+  const router = useRouter();
 
   return (
     <div className="row">
@@ -16,12 +15,22 @@ export default function ContactUs({data}) {
         <pre>{data.content[router.locale]}</pre>
       </div>
       <div className="col-md-7">
-        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+        >
           {/* You still need to add the hidden input with the form name to your JSX form */}
           <input type="hidden" name="form-name" value="contact" />
 
           <label>What is your Email?</label>
-          <input type="email" name="email" className={'w-100'} placeholder="Email" />
+          <input
+            type="email"
+            name="email"
+            className={'w-100'}
+            placeholder="Email"
+          />
 
           <label>Please fill in the details </label>
           <textarea name="content" className={'w-100'} placeholder="Message" />
@@ -33,5 +42,5 @@ export default function ContactUs({data}) {
         </form>
       </div>
     </div>
-  )
+  );
 }

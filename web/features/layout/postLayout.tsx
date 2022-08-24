@@ -1,11 +1,10 @@
 // Layout for individual blog posts
-import React from 'react'
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-import Navbar from './Navbar'
-import Footer from './Footer'
+import Navbar from './Navbar';
+import Footer from './Footer';
 
-export default function PostLayout({children}) {
+export default function PostLayout({ children }) {
   return (
     <>
       <Navbar />
@@ -13,9 +12,9 @@ export default function PostLayout({children}) {
       <main>{children}</main>
       <Footer />
     </>
-  )
+  );
 }
 
 PostLayout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};

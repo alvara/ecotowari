@@ -51,6 +51,6 @@ export default createSchema({
     route,
     simplePortableText,
     siteConfig,
-    textSection,
-  ]),
+    textSection
+  ])
 })

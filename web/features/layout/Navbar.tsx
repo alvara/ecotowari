@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import React from 'react';
 import { useRouter } from 'next/router';
 import cookieCutter from 'cookie-cutter';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Navbar() {
   const router = useRouter();
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav className="navbar navbar-expand-md navbar-light">

@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
@@ -11,8 +10,8 @@ GetStickerCTA.propTypes = {
 export default function GetStickerCTA({ data }) {
   const router = useRouter();
 
-  const url =
-    'https://ecotowari.us14.list-manage.com/subscribe/post?u=fb888509b6f45d3e61ff06e47&amp;id=5ec65eaa39';
+  // const url =
+  //   'https://ecotowari.us14.list-manage.com/subscribe/post?u=fb888509b6f45d3e61ff06e47&amp;id=5ec65eaa39';
 
   return (
     <div id="sticker" className="row">

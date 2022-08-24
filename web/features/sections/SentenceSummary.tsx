@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function SentenceSummary() {
   return (
     <div className="row">
